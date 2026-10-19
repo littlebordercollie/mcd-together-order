@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-19T11:06:17.336Z",
+  "url": "https://littlebordercollie.github.io/mcd-together-order/",
+  "checks": [
+    "公开页面 HTTP 200",
+    "静态演示标记及首页标题正确",
+    "公开 HTML 与本机构建字节一致",
+    "公开页面手机餐盘可见",
+    "公开页面完成选餐、核价、交接流程",
+    "餐品图片加载且无脚本异常",
+    "公开网页语音实际播放"
+  ],
+  "passed": true
+}

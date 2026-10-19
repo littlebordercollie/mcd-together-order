@@ -12,7 +12,8 @@
     "test": "node --test test/*.test.mjs",
     "test:browser": "node scripts/browser-test.mjs",
     "build": "node scripts/build.mjs",
-    "mcp:inspect": "node --env-file-if-exists=.env scripts/inspect-mcp.mjs"
+    "mcp:inspect": "node --env-file-if-exists=.env scripts/inspect-mcp.mjs",
+    "verify:published": "node scripts/verify-published.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.1",

@@ -11,6 +11,7 @@
 | 随附语音 | 15 个 MP3 均触发真实 `playing` 事件，时长有效 |
 | 360 像素窄屏 | 五个主要页面无横向溢出；标题按完整分句换行 |
 | 演示视频 | 75 秒，1280×900，H.264 + AAC；完整解码检查通过 |
+| 公网发布复核 | 7 项检查通过：HTTP 200、构建一致、手机餐盘、完整交接、图片、语音与脚本异常检查 |
 | 依赖审计 | npm audit：0 已知漏洞（本次快照） |
 | 参赛声明 | 与官方下载文件逐字节一致 |
 
@@ -27,7 +28,7 @@
 - 三种屏幕上检查图片实际加载和横向溢出；另查看实际渲染截图核对标题、卡片和按钮断行。
 - 单元测试覆盖报价变化、报价过期、重复提交、并发双击、下单超时跨实例恢复后的阻断、错误取餐方式、未知付款域名、原始选择与修改记录。
 
-[浏览器机器记录](browser-validation.json) · [页面截图](screenshots/) · [视频记录说明](demo-video.json)
+[公网发布记录](published-validation.json) · [浏览器机器记录](browser-validation.json) · [页面截图](screenshots/) · [视频记录说明](demo-video.json)
 
 ## 尚未验证
 
@@ -47,6 +48,7 @@ npm test
 npm run test:browser
 node scripts/check-small-screen.mjs
 npm run build
+npm run verify:published
 ```
 
 测试结果写入 `test-results/`；该目录不进入 Git。公开记录为本次摘要副本。录屏需本机 Chrome、macOS say、系统 ffmpeg，并先执行 `npx playwright install ffmpeg`；随后运行 `node scripts/record-demo.mjs`。
