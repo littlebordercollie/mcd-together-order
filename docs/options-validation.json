@@ -1,0 +1,175 @@
+{
+  "at": "2026-10-19T16:41:26.980Z",
+  "checks": [
+    "live/desktop弹窗打开未加入清单",
+    "live/desktop关闭不偷偷选择",
+    "live/desktop悬停朗读选项但不替人选择",
+    "live/desktop选择后不自动跳步",
+    "live/desktop/kind无横向溢出",
+    "live/desktop/size无横向溢出",
+    "live/desktop第四种多冰可见",
+    "live/desktop/ice无横向溢出",
+    "live/desktop确认后只有一份",
+    "live/desktop/tray无横向溢出",
+    "live/desktop清单实际播出无糖中杯与去冰",
+    "live/desktop/recap无横向溢出",
+    "live/desktop核价包含完整规格",
+    "live/desktop中杯无糖去冰官方报价10元",
+    "live/desktop/quote无横向溢出",
+    "live/desktop更改规格使旧报价失效",
+    "live/desktop保留最初中杯去冰",
+    "live/desktop家长调整有完整记录",
+    "live/desktop/changed无横向溢出",
+    "live/desktop大杯无糖少冰官方报价12元",
+    "live/desktop刷新保留规格但清除旧报价",
+    "live/desktop真实下单开关始终关闭",
+    "live/desktop待家长确认时禁止核价",
+    "live/desktop家长明确确认后恢复核价",
+    "live/mobile弹窗打开未加入清单",
+    "live/mobile关闭不偷偷选择",
+    "live/mobile手机点按播放规格提问",
+    "live/mobile选择后不自动跳步",
+    "live/mobile/kind无横向溢出",
+    "live/mobile/size无横向溢出",
+    "live/mobile第四种多冰可见",
+    "live/mobile/ice无横向溢出",
+    "live/mobile确认后只有一份",
+    "live/mobile/tray无横向溢出",
+    "live/mobile清单实际播出无糖中杯与去冰",
+    "live/mobile/recap无横向溢出",
+    "live/mobile核价包含完整规格",
+    "live/mobile中杯无糖去冰官方报价10元",
+    "live/mobile/quote无横向溢出",
+    "live/mobile更改规格使旧报价失效",
+    "live/mobile保留最初中杯去冰",
+    "live/mobile家长调整有完整记录",
+    "live/mobile/changed无横向溢出",
+    "live/mobile大杯无糖少冰官方报价12元",
+    "live/mobile刷新保留规格但清除旧报价",
+    "live/mobile真实下单开关始终关闭",
+    "live/mobile待家长确认时禁止核价",
+    "live/mobile家长明确确认后恢复核价",
+    "demo/narrow弹窗打开未加入清单",
+    "demo/narrow关闭不偷偷选择",
+    "demo/narrow手机点按播放规格提问",
+    "demo/narrow选择后不自动跳步",
+    "demo/narrow/kind无横向溢出",
+    "demo/narrow/size无横向溢出",
+    "demo/narrow第四种多冰可见",
+    "demo/narrow/ice无横向溢出",
+    "demo/narrow确认后只有一份",
+    "demo/narrow/tray无横向溢出",
+    "demo/narrow清单实际播出无糖中杯与去冰",
+    "demo/narrow/recap无横向溢出",
+    "demo/narrow核价包含完整规格",
+    "demo/narrow/quote无横向溢出",
+    "demo/narrow更改规格使旧报价失效",
+    "demo/narrow保留最初中杯去冰",
+    "demo/narrow家长调整有完整记录",
+    "demo/narrow/changed无横向溢出",
+    "demo/narrow刷新保留规格但清除旧报价",
+    "demo/narrow待家长确认时禁止核价",
+    "demo/narrow家长明确确认后恢复核价",
+    "所有浏览器未发起创建订单请求",
+    "无页面脚本异常",
+    "核价请求传递规格和冰量",
+    "核价请求传递规格和冰量",
+    "核价请求传递规格和冰量",
+    "核价请求传递规格和冰量"
+  ],
+  "screenshots": [
+    "docs/screenshots/options-live-kind-desktop.png",
+    "docs/screenshots/options-live-size-desktop.png",
+    "docs/screenshots/options-live-ice-desktop.png",
+    "docs/screenshots/options-live-tray-desktop.png",
+    "docs/screenshots/options-live-recap-desktop.png",
+    "docs/screenshots/options-live-quote-desktop.png",
+    "docs/screenshots/options-live-changed-desktop.png",
+    "docs/screenshots/options-live-kind-mobile.png",
+    "docs/screenshots/options-live-size-mobile.png",
+    "docs/screenshots/options-live-ice-mobile.png",
+    "docs/screenshots/options-live-tray-mobile.png",
+    "docs/screenshots/options-live-recap-mobile.png",
+    "docs/screenshots/options-live-quote-mobile.png",
+    "docs/screenshots/options-live-changed-mobile.png",
+    "docs/screenshots/options-demo-kind-narrow.png",
+    "docs/screenshots/options-demo-size-narrow.png",
+    "docs/screenshots/options-demo-ice-narrow.png",
+    "docs/screenshots/options-demo-tray-narrow.png",
+    "docs/screenshots/options-demo-recap-narrow.png",
+    "docs/screenshots/options-demo-quote-narrow.png",
+    "docs/screenshots/options-demo-changed-narrow.png"
+  ],
+  "errors": [],
+  "transactionRequests": 0,
+  "quotes": [
+    {
+      "key": "live/desktop",
+      "body": {
+        "storeCode": "1950147",
+        "items": [
+          {
+            "productCode": "9900008751",
+            "quantity": 1,
+            "selection": {
+              "variantCode": "3071",
+              "iceKey": "0-0",
+              "needsHelp": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "live/desktop",
+      "body": {
+        "storeCode": "1950147",
+        "items": [
+          {
+            "productCode": "9900008751",
+            "quantity": 1,
+            "selection": {
+              "variantCode": "3111",
+              "iceKey": "1-1",
+              "needsHelp": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "live/mobile",
+      "body": {
+        "storeCode": "1950147",
+        "items": [
+          {
+            "productCode": "9900008751",
+            "quantity": 1,
+            "selection": {
+              "variantCode": "3071",
+              "iceKey": "0-0",
+              "needsHelp": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "live/mobile",
+      "body": {
+        "storeCode": "1950147",
+        "items": [
+          {
+            "productCode": "9900008751",
+            "quantity": 1,
+            "selection": {
+              "variantCode": "3111",
+              "iceKey": "1-1",
+              "needsHelp": false
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

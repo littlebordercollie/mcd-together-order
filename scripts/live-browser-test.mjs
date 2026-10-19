@@ -132,6 +132,9 @@ try {
     await page.locator('[data-action="category"][data-id="drink"]').click();
     await page.locator('[data-product="3010"] .select-button').click();
     await page
+      .getByRole("button", { name: "就按这些选，放进餐盘", exact: true })
+      .click();
+    await page
       .getByRole("button", { name: "我选好了", exact: true })
       .first()
       .click();

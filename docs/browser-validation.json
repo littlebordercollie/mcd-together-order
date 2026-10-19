@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-19T16:05:26.964Z",
+  "at": "2026-10-19T16:38:02.020Z",
   "base": "http://127.0.0.1:3741",
   "checks": [
     "desktop/welcome: 无横向溢出",
@@ -32,7 +32,7 @@
     "desktop: 完成页明确没有扣款",
     "desktop/done: 无横向溢出",
     "desktop/done: 图片实际加载",
-    "68 个 MiniMax 音频均真实触发 playing 且有有效时长",
+    "99 个 MiniMax 音频均真实触发 playing 且有有效时长",
     "desktop: 什么都不选也能完成沟通且不创建订单",
     "tablet/welcome: 无横向溢出",
     "tablet/welcome: 图片实际加载",
@@ -122,6 +122,74 @@
   ],
   "errors": [],
   "audio": [
+    {
+      "key": "option-kind",
+      "duration": 4.771719
+    },
+    {
+      "key": "option-size",
+      "duration": 4.133156
+    },
+    {
+      "key": "option-ice",
+      "duration": 2.728375
+    },
+    {
+      "key": "kind-regular",
+      "duration": 1
+    },
+    {
+      "key": "kind-zero",
+      "duration": 1.358375
+    },
+    {
+      "key": "size-small",
+      "duration": 0.97525
+    },
+    {
+      "key": "size-medium",
+      "duration": 1
+    },
+    {
+      "key": "size-large",
+      "duration": 0.893969
+    },
+    {
+      "key": "ice-standard",
+      "duration": 1.102969
+    },
+    {
+      "key": "ice-none",
+      "duration": 1.869219
+    },
+    {
+      "key": "ice-less",
+      "duration": 0.893969
+    },
+    {
+      "key": "ice-more",
+      "duration": 0.97525
+    },
+    {
+      "key": "option-confirm",
+      "duration": 2.507781
+    },
+    {
+      "key": "option-help",
+      "duration": 1.567375
+    },
+    {
+      "key": "option-next",
+      "duration": 1.021688
+    },
+    {
+      "key": "option-back",
+      "duration": 1.277125
+    },
+    {
+      "key": "option-pending",
+      "duration": 3.750031
+    },
     {
       "key": "start",
       "duration": 3.750031
@@ -257,6 +325,62 @@
     {
       "key": "empty",
       "duration": 2.763188
+    },
+    {
+      "key": "live-cola",
+      "duration": 1.056531
+    },
+    {
+      "key": "name-live-cola",
+      "duration": 0.97525
+    },
+    {
+      "key": "cola-small",
+      "duration": 1.277125
+    },
+    {
+      "key": "name-cola-small",
+      "duration": 1.184219
+    },
+    {
+      "key": "cola-medium",
+      "duration": 1.184219
+    },
+    {
+      "key": "name-cola-medium",
+      "duration": 1.277125
+    },
+    {
+      "key": "cola-large",
+      "duration": 1.277125
+    },
+    {
+      "key": "name-cola-large",
+      "duration": 1.358375
+    },
+    {
+      "key": "cola-zero-small",
+      "duration": 2.043375
+    },
+    {
+      "key": "name-cola-zero-small",
+      "duration": 2.089813
+    },
+    {
+      "key": "cola-zero-medium",
+      "duration": 1.915656
+    },
+    {
+      "key": "name-cola-zero-medium",
+      "duration": 1.996938
+    },
+    {
+      "key": "cola-zero-large",
+      "duration": 1.9
+    },
+    {
+      "key": "name-cola-zero-large",
+      "duration": 1.996938
     },
     {
       "key": "live-521143",

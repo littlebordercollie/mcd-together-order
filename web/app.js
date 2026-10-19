@@ -8,7 +8,15 @@ import {
   changeQuantity,
   handoff,
   basketSignature,
+  setSelection,
 } from "./state.js";
+import {
+  defaultSelection,
+  resolveSelection,
+  selectionSteps,
+  pickOption,
+} from "./options.js";
+import { optionView } from "./option-view.js";
 import { categories } from "./demo-data.js";
 import { configuration, api } from "./api.js";
 import { speak, stopAudio, bindHoverAudio } from "./audio.js";
@@ -32,6 +40,7 @@ let state = restore(),
   config = { live: false, orderEnabled: false },
   busy = false,
   noticeTimer;
+let optionDraft = null;
 function toast(text) {
   notice.textContent = text;
   notice.classList.add("visible");
@@ -81,7 +90,44 @@ function dialog(title, html) {
   modal.showModal();
 }
 function close() {
+  optionDraft = null;
+  modal.classList.remove("options-dialog");
   modal.close();
+}
+function showOptions(id, parent = false) {
+  const p = state.menu.find((p) => p.id === id);
+  if (!p?.variants?.length) return;
+  optionDraft = {
+    id,
+    parent,
+    step: 0,
+    group: 0,
+    choice: {
+      ...(state.selections?.[id] || defaultSelection(p)),
+      needsHelp: false,
+    },
+  };
+  drawOptions();
+  if (!modal.open) modal.showModal();
+}
+function drawOptions() {
+  stopAudio();
+  const d = optionDraft,
+    p = state.menu.find((p) => p.id === d.id);
+  modal.classList.add("options-dialog");
+  modal.innerHTML = optionView(p, d.choice, d.step, d.group, d.parent);
+  modal.querySelector("#dialog-title")?.focus({ preventScroll: true });
+}
+function commitOptions(needsHelp = false) {
+  const d = optionDraft,
+    p = state.menu.find((p) => p.id === d.id);
+  if (!state.basket[d.id]) choose(state, d.id);
+  setSelection(state, d.id, { ...d.choice, needsHelp }, d.parent);
+  const result = resolveSelection(p, state.selections[d.id]);
+  close();
+  render();
+  speak(["selected-prefix", ...result.nameAudio]);
+  toast("已选：" + result.displayName);
 }
 function parentHelp() {
   dialog(
@@ -272,9 +318,57 @@ async function act(action, id, button) {
       state.group = 0;
       render();
       break;
+    case "options":
+      showOptions(id, state.page === "review");
+      break;
+    case "option-pick": {
+      if (!optionDraft) break;
+      const p = state.menu.find((p) => p.id === optionDraft.id);
+      optionDraft.choice = pickOption(
+        p,
+        optionDraft.choice,
+        button.dataset.step,
+        button.dataset.value,
+      );
+      drawOptions();
+      break;
+    }
+    case "option-next":
+    case "option-back": {
+      if (!optionDraft) break;
+      const steps = selectionSteps(
+        state.menu.find((p) => p.id === optionDraft.id),
+      );
+      optionDraft.step = Math.max(
+        0,
+        Math.min(
+          steps.length - 1,
+          optionDraft.step + (action === "option-next" ? 1 : -1),
+        ),
+      );
+      optionDraft.group = 0;
+      drawOptions();
+      break;
+    }
+    case "option-group":
+      if (optionDraft) {
+        optionDraft.group = optionDraft.group ? 0 : 1;
+        drawOptions();
+      }
+      break;
+    case "option-save":
+      if (optionDraft) commitOptions();
+      break;
+    case "option-help":
+      if (optionDraft) commitOptions(true);
+      break;
     case "choose": {
       const p = state.menu.find((p) => p.id === id);
       if (!p) return;
+      if (p.variants?.length) {
+        showOptions(id);
+        break;
+      }
       if (!choose(state, id)) {
         toast("已经选好了，还是一份。");
         return;
@@ -321,6 +415,8 @@ async function act(action, id, button) {
       break;
     case "quote":
       await run(button, async () => {
+        if (selected(state).some((p) => p.needsHelp))
+          throw new Error("请先一起确认标出的大小和冰量。");
         const signature = basketSignature(state);
         if (state.mode === "demo")
           state.quote = {
@@ -331,7 +427,7 @@ async function act(action, id, button) {
               0,
             ),
             lines: selected(state).map((p) => ({
-              name: p.name,
+              name: p.displayName,
               quantity: p.quantity,
               subtotalFen: p.priceFen * p.quantity,
             })),
@@ -343,6 +439,7 @@ async function act(action, id, button) {
             items: selected(state).map((p) => ({
               productCode: p.id,
               quantity: p.quantity,
+              ...(p.selection ? { selection: p.selection } : {}),
             })),
           });
           if (signature !== basketSignature(state))
@@ -449,7 +546,11 @@ document.addEventListener("audio-error", (event) =>
       : "这项语音暂时无法播放，可以先看图片和文字。",
   ),
 );
-modal.addEventListener("close", stopAudio);
+modal.addEventListener("close", () => {
+  stopAudio();
+  optionDraft = null;
+  modal.classList.remove("options-dialog");
+});
 bindHoverAudio(root);
 bindHoverAudio(modal);
 render();

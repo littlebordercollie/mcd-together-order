@@ -4,14 +4,15 @@
 
 | 检查 | 实际结果 |
 | --- | --- |
-| Node 单元测试 | 40 项通过，0 失败 |
+| Node 单元测试 | 48 项通过，0 失败 |
 | Chrome 浏览器流程 | 97 项检查通过，0 脚本异常 |
 | 订单恢复浏览器流程 | 33 项通过；全部使用模拟接口，0 次真实 MCP 调用 |
 | 屏幕尺寸 | 1366×900、820×1180、390×844；另补 360×780 排版检查 |
-| 页面截图 | 18 张演示流程截图、8 张真实菜单流程截图，另有桌面悬停与手机点按播放截图各 1 张 |
-| 真实门店与核价 | 桌面、手机共 22 项通过；回龙观门店、12 个当前单品、三项清单官方报价 ¥47.50，0 次创建订单请求 |
+| 页面截图 | 18 张演示流程截图、8 张真实菜单流程截图，另有 21 张规格流程截图、桌面悬停与手机点按播放截图各 1 张 |
+| 真实门店与核价 | 桌面、手机共 22 项通过；回龙观门店、13 个当前餐品、三项清单官方报价 ¥47.50，0 次创建订单请求 |
 | 后续真实试单 | 经本人确认创建 1 笔 ¥12 外带订单：4 块麦乐鸡 × 1；取得官方付款链接，家长端找回已知订单并查询到“待支付”；本人选择暂不付款 |
-| 随附语音 | 68 个 MiniMax MP3 均触发真实 `playing` 事件，时长有效；另生成 7 段 MiniMax 视频旁白 |
+| 规格与冰量 | 75 项检查通过；真实菜单桌面、手机与 360 像素演示；普通／无糖、杯型、四种冰量、悬停朗读、原始规格保留、修改记录、刷新恢复、报价失效和待家长确认阻断；0 次创建订单请求 |
+| 随附语音 | 99 个 MiniMax MP3 均触发真实 `playing` 事件，时长有效；另生成 7 段 MiniMax 视频旁白 |
 | 悬停与统一音色 | 22 项浏览器检查通过：真实悬停、键盘聚焦、手机点按、连续清单、不叠播、无系统语音回退 |
 | 360 像素窄屏 | 五个主要页面无横向溢出；标题按完整分句换行 |
 | 演示视频 | 75 秒，1280×900，H.264 + AAC；完整解码检查通过 |
@@ -34,7 +35,7 @@
 - 恢复测试覆盖候选匹配、空历史、缺少快照、多笔候选、家长确认、详情变化、并发恢复和未知状态；恢复只查询已有订单，不再次创建。
 - 用模拟接口实测电脑 1366×900 与手机 360×780 的恢复入口、确认、空餐盘显示已有订单、刷新恢复、官方状态展示、无付款链接提示、服务器超时及浏览器断网。逐张查看恢复弹窗、空结果和订单详情渲染，并修复中文断句。
 
-[真实 MCP 调用摘要](live-mcp-evidence.json) · [真实页面联调记录](live-validation.json) · [公网发布记录](published-validation.json) · [浏览器机器记录](browser-validation.json) · [MiniMax 本地悬停记录](minimax-validation.json) · [MiniMax 公网悬停记录](minimax-published-validation.json) · [恢复测试记录](recovery-validation.json) · [页面截图](screenshots/) · [视频记录说明](demo-video.json)
+[规格流程验证](options-validation.json) · [真实 MCP 调用摘要](live-mcp-evidence.json) · [真实页面联调记录](live-validation.json) · [公网发布记录](published-validation.json) · [浏览器机器记录](browser-validation.json) · [MiniMax 本地悬停记录](minimax-validation.json) · [MiniMax 公网悬停记录](minimax-published-validation.json) · [恢复测试记录](recovery-validation.json) · [页面截图](screenshots/) · [视频记录说明](demo-video.json)
 
 真实试单证据见 [试单记录](trial-order-validation.json)。创建接口仅调用一次；付款页面已创建标签，但读取页面超时，未确认官方付款页面完整渲染。订单号、完整付款链接及二维码仅保存在本机，不进入公开记录。
 
@@ -59,6 +60,7 @@ node scripts/audio-browser-test.mjs
 node scripts/check-small-screen.mjs
 # 已配置 Token 后，可选执行真实只读检查（固定使用北京回龙观测试场景）
 node scripts/live-browser-test.mjs
+node scripts/options-browser-test.mjs
 npm run build
 npm run verify:published
 ```
