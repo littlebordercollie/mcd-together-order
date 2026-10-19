@@ -2358,3 +2358,20 @@ button[aria-busy="true"] {
   display: inline-block;
   white-space: nowrap;
 }
+
+.touch-tip {
+  display: none;
+}
+.food-card.speaking,
+.recap-card.speaking {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+@media (hover: none), (max-width: 640px) {
+  .hover-tip {
+    display: none;
+  }
+  .touch-tip {
+    display: inline;
+  }
+}

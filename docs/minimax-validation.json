@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-19T14:18:59.704Z",
+  "checks": [
+    "桌面：悬停图卡实际播放 MiniMax MP3",
+    "桌面：悬停不会加入餐盘",
+    "桌面：图卡和听读按钮有播放状态",
+    "桌面：同一图卡内移动不会反复重播",
+    "桌面：快速划过不触发朗读",
+    "桌面：悬停听一听同样播放",
+    "桌面：键盘聚焦也能播放",
+    "桌面：选择反馈沿用同一音色",
+    "桌面：整份清单由 MiniMax 名称和数量录音连续播放",
+    "桌面：离开页面停止清单续播",
+    "桌面：没有系统语音回退",
+    "桌面：没有音频叠播",
+    "桌面：标题和页面没有横向溢出",
+    "手机：点击听一听实际播放",
+    "手机：显示点按提示",
+    "手机：选择反馈沿用同一音色",
+    "手机：整份清单由 MiniMax 名称和数量录音连续播放",
+    "手机：离开页面停止清单续播",
+    "手机：没有系统语音回退",
+    "手机：没有音频叠播",
+    "手机：标题和页面没有横向溢出",
+    "没有脚本异常"
+  ],
+  "errors": [],
+  "recordings": [
+    {
+      "device": "desktop",
+      "played": [
+        "start.mp3",
+        "fish.mp3",
+        "chicken.mp3",
+        "fish.mp3",
+        "selected-prefix.mp3",
+        "name-chicken.mp3",
+        "recap-prefix.mp3",
+        "name-chicken.mp3",
+        "quantity-1.mp3",
+        "original-prefix.mp3"
+      ]
+    },
+    {
+      "device": "mobile",
+      "played": [
+        "start.mp3",
+        "fish.mp3",
+        "selected-prefix.mp3",
+        "name-chicken.mp3",
+        "recap-prefix.mp3",
+        "name-chicken.mp3",
+        "quantity-1.mp3",
+        "original-prefix.mp3"
+      ]
+    }
+  ],
+  "passed": true
+}

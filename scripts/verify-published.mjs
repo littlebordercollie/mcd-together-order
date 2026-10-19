@@ -2,6 +2,7 @@ import { chromium } from "playwright";
 import assert from "node:assert/strict";
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
+import { prompts } from "./audio-prompts.mjs";
 const base = "https://littlebordercollie.github.io/mcd-together-order/";
 const report = { at: new Date().toISOString(), url: base, checks: [] };
 const browser = await chromium.launch({ channel: "chrome", headless: true });
@@ -45,6 +46,23 @@ try {
   report.checks.push(
     `公开脚本和样式与本机构建逐字节一致（${assets.length} 个文件）`,
   );
+  for (const key of Object.keys(prompts)) {
+    const path = `assets/audio/minimax/${key}.mp3`;
+    const response = await page.request.get(new URL(path, base).href);
+    assert.equal(response.status(), 200, path);
+    assert.equal(
+      createHash("sha256")
+        .update(await response.body())
+        .digest("hex"),
+      createHash("sha256")
+        .update(await readFile(`dist/${path}`))
+        .digest("hex"),
+      path,
+    );
+  }
+  report.checks.push(
+    `公开 MiniMax 录音与本地生成文件逐字节一致（${Object.keys(prompts).length} 条）`,
+  );
   await page.getByRole("button", { name: "开始一起点", exact: true }).click();
   await page.getByRole("button", { name: "准备好了，交给孩子" }).click();
   await page.getByRole("button", { name: "选择麦香鸡", exact: true }).click();
@@ -74,7 +92,7 @@ try {
   assert.equal(errors.length, 0);
   report.checks.push("餐品图片加载且无脚本异常");
   const sound = await page.evaluate(async () => {
-    const audio = new Audio("assets/audio/chicken.mp3");
+    const audio = new Audio("assets/audio/minimax/chicken.mp3");
     await audio.play();
     const result = { duration: audio.duration, playing: !audio.paused };
     audio.pause();

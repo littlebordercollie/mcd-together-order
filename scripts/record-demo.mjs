@@ -1,3 +1,4 @@
+import { narration, voiceSettings } from "./audio-prompts.mjs";
 import { chromium } from "playwright";
 import { mkdir, copyFile, writeFile } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
@@ -8,15 +9,6 @@ const context = await browser.newContext({
   recordVideo: { dir: ".local/video", size: { width: 1280, height: 900 } },
 });
 const page = await context.newPage();
-const narration = [
-  [0, "麦麦一起点，孩子慢慢选，家长接着买。"],
-  [9, "家长先留下今天可以选的餐品。"],
-  [18, "孩子看图片，听名称，选择想要的。"],
-  [29, "每一类都能跳过。选好了，也能改主意。"],
-  [40, "用图片清单，回看自己的选择。"],
-  [49, "家长接手，核对餐品和数量。调整都会留下记录。"],
-  [62, "演示到这里结束。真实购买，将由家长确认和付款。"],
-];
 try {
   await page.goto("http://127.0.0.1:3741");
   await page.waitForLoadState("networkidle");
@@ -34,7 +26,7 @@ try {
   await at(18);
   await page.getByRole("button", { name: "准备好了，交给孩子" }).click();
   await at(21);
-  await page.locator('[data-product="demo-chicken"] [data-listen]').click();
+  await page.locator('[data-product="demo-chicken"] .food-pick').hover();
   await at(25);
   await page.getByRole("button", { name: "选择麦香鸡", exact: true }).click();
   await at(29);
@@ -76,9 +68,8 @@ try {
 const inputs = [];
 const filters = [];
 for (let i = 0; i < narration.length; i++) {
-  const [sec, text] = narration[i];
-  const path = `.local/video/voice-${i}.aiff`;
-  execFileSync("say", ["-v", "Tingting", "-r", "172", "-o", path, text]);
+  const [sec] = narration[i];
+  const path = `.local/video/minimax-${i}.mp3`;
   inputs.push("-i", path);
   filters.push(`[${i + 1}:a]adelay=${sec * 1000}|${sec * 1000}[a${i}]`);
 }
@@ -125,6 +116,7 @@ await writeFile(
         "真实本地演示页面，由 Playwright 操作并录屏；旁白后期配入，非实时 MCP 或真实付款录像。",
       viewport: { width: 1280, height: 900 },
       narration,
+      voice: { engine: "MiniMax", ...voiceSettings },
     },
     null,
     2,

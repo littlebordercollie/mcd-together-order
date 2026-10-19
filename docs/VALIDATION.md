@@ -8,11 +8,12 @@
 | Chrome 浏览器流程 | 97 项检查通过，0 脚本异常 |
 | 订单恢复浏览器流程 | 33 项通过；全部使用模拟接口，0 次真实 MCP 调用 |
 | 屏幕尺寸 | 1366×900、820×1180、390×844；另补 360×780 排版检查 |
-| 页面截图 | 18 张：每种主要设备的首页、准备、选餐、回顾、核对、完成页 |
-| 随附语音 | 15 个 MP3 均触发真实 `playing` 事件，时长有效 |
+| 页面截图 | 18 张主流程截图，另有桌面悬停与手机点按播放截图各 1 张 |
+| 随附语音 | 34 个 MiniMax MP3 均触发真实 `playing` 事件，时长有效；另生成 7 段 MiniMax 视频旁白 |
+| 悬停与统一音色 | 22 项浏览器检查通过：真实悬停、键盘聚焦、手机点按、连续清单、不叠播、无系统语音回退 |
 | 360 像素窄屏 | 五个主要页面无横向溢出；标题按完整分句换行 |
 | 演示视频 | 75 秒，1280×900，H.264 + AAC；完整解码检查通过 |
-| 公网发布复核 | 8 项检查通过：HTTP 200、HTML 及 9 个脚本/样式文件与构建逐字节一致、手机餐盘、完整交接、图片、语音与脚本异常检查 |
+| 公网发布复核 | 9 项检查通过：HTTP 200、HTML 与 9 个脚本/样式文件一致、34 条 MiniMax 录音与本地逐字节一致、手机餐盘、交接、图片与语音；另在公网完成 22 项悬停播放检查 |
 | 依赖审计 | npm audit：0 已知漏洞（本次快照） |
 | 参赛声明 | 与官方下载文件逐字节一致 |
 
@@ -31,7 +32,7 @@
 - 恢复测试覆盖候选匹配、空历史、缺少快照、多笔候选、家长确认、详情变化、并发恢复和未知状态；恢复只查询已有订单，不再次创建。
 - 用模拟接口实测电脑 1366×900 与手机 360×780 的恢复入口、确认、空餐盘显示已有订单、刷新恢复、官方状态展示、无付款链接提示、服务器超时及浏览器断网。逐张查看恢复弹窗、空结果和订单详情渲染，并修复中文断句。
 
-[公网发布记录](published-validation.json) · [浏览器机器记录](browser-validation.json) · [恢复测试记录](recovery-validation.json) · [页面截图](screenshots/) · [视频记录说明](demo-video.json)
+[公网发布记录](published-validation.json) · [浏览器机器记录](browser-validation.json) · [MiniMax 本地悬停记录](minimax-validation.json) · [MiniMax 公网悬停记录](minimax-published-validation.json) · [恢复测试记录](recovery-validation.json) · [页面截图](screenshots/) · [视频记录说明](demo-video.json)
 
 ## 尚未验证
 
@@ -50,9 +51,12 @@ npm start
 npm test
 npm run test:browser
 node scripts/recovery-browser-test.mjs
+node scripts/audio-browser-test.mjs
 node scripts/check-small-screen.mjs
 npm run build
 npm run verify:published
 ```
 
-测试结果写入 `test-results/`；该目录不进入 Git。公开记录为本次摘要副本。录屏需本机 Chrome、macOS say、系统 ffmpeg，并先执行 `npx playwright install ffmpeg`；随后运行 `node scripts/record-demo.mjs`。
+测试结果写入 `test-results/`；该目录不进入 Git。公开记录为本次摘要副本。配音文案在 `scripts/audio-prompts.mjs`；使用 `node scripts/make-audio.mjs --dry-run` 查看清单，实际生成使用 `--env-file` 指向本机 MiniMax 配置，脚本仅读取密钥，不打印或发布。每条成功录音单独落盘，再次运行核对参数及哈希后跳过，不自动重试付费请求。
+
+录屏需本机 Chrome、系统 ffmpeg，以及已生成的 `.local/video/minimax-*.mp3`；先执行 `npx playwright install ffmpeg`，随后运行 `node scripts/record-demo.mjs`。新版视频使用 MiniMax 旁白，展示图卡悬停操作。

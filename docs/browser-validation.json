@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-19T11:17:40.374Z",
+  "at": "2026-10-19T14:21:07.413Z",
   "checks": [
     "desktop/welcome: 无横向溢出",
     "desktop/welcome: 图片实际加载",
@@ -31,7 +31,7 @@
     "desktop: 完成页明确没有扣款",
     "desktop/done: 无横向溢出",
     "desktop/done: 图片实际加载",
-    "15 个音频文件均真实触发 playing 且有有效时长",
+    "34 个 MiniMax 音频均真实触发 playing 且有有效时长",
     "desktop: 什么都不选也能完成沟通且不创建订单",
     "tablet/welcome: 无横向溢出",
     "tablet/welcome: 图片实际加载",
@@ -123,63 +123,139 @@
   "audio": [
     {
       "key": "start",
-      "duration": 3.093469
+      "duration": 3.750031
     },
     {
       "key": "main",
-      "duration": 4.309977
+      "duration": 4.435031
     },
     {
       "key": "side",
-      "duration": 4.368027
+      "duration": 4.945875
     },
     {
       "key": "drink",
-      "duration": 3.775918
+      "duration": 4.771719
     },
     {
       "key": "help",
-      "duration": 3.778413
+      "duration": 3.366906
     },
     {
       "key": "bigmac",
-      "duration": 1.679138
+      "duration": 2.298781
     },
     {
       "key": "chicken",
-      "duration": 1.872744
+      "duration": 2.4
     },
     {
       "key": "fish",
-      "duration": 1.779864
+      "duration": 2.5
     },
     {
       "key": "cheese",
-      "duration": 2.280726
+      "duration": 3
     },
     {
       "key": "fries",
-      "duration": 2.601859
+      "duration": 3.320469
     },
     {
       "key": "nuggets",
-      "duration": 2.871247
+      "duration": 3.494625
     },
     {
       "key": "corn",
-      "duration": 2.406576
+      "duration": 3.448188
     },
     {
       "key": "cola",
-      "duration": 2.754739
+      "duration": 3.448188
     },
     {
       "key": "orange",
-      "duration": 3.347664
+      "duration": 4.051906
     },
     {
       "key": "water",
-      "duration": 2.18263
+      "duration": 2.728375
+    },
+    {
+      "key": "name-bigmac",
+      "duration": 1.149406
+    },
+    {
+      "key": "name-chicken",
+      "duration": 1.230688
+    },
+    {
+      "key": "name-fish",
+      "duration": 1.102969
+    },
+    {
+      "key": "name-cheese",
+      "duration": 1.439656
+    },
+    {
+      "key": "name-fries",
+      "duration": 1.405469
+    },
+    {
+      "key": "name-nuggets",
+      "duration": 1.4
+    },
+    {
+      "key": "name-corn",
+      "duration": 1.486094
+    },
+    {
+      "key": "name-cola",
+      "duration": 1.834406
+    },
+    {
+      "key": "name-orange",
+      "duration": 2.472938
+    },
+    {
+      "key": "name-water",
+      "duration": 1.567375
+    },
+    {
+      "key": "quantity-1",
+      "duration": 0.893969
+    },
+    {
+      "key": "quantity-2",
+      "duration": 0.928813
+    },
+    {
+      "key": "quantity-3",
+      "duration": 1.021688
+    },
+    {
+      "key": "quantity-4",
+      "duration": 1.021688
+    },
+    {
+      "key": "quantity-5",
+      "duration": 1
+    },
+    {
+      "key": "recap-prefix",
+      "duration": 1.056531
+    },
+    {
+      "key": "selected-prefix",
+      "duration": 1.056531
+    },
+    {
+      "key": "original-prefix",
+      "duration": 2.937344
+    },
+    {
+      "key": "empty",
+      "duration": 2.763188
     }
   ],
   "passed": true

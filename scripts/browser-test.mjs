@@ -1,3 +1,4 @@
+import { prompts } from "./audio-prompts.mjs";
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
 import { mkdir, writeFile } from "node:fs/promises";
@@ -193,27 +194,11 @@ try {
     await snap("done");
     // Actual audio event check on every shipped prompt, without adding choices.
     if (device === "desktop") {
-      const sounds = [
-        "start",
-        "main",
-        "side",
-        "drink",
-        "help",
-        "bigmac",
-        "chicken",
-        "fish",
-        "cheese",
-        "fries",
-        "nuggets",
-        "corn",
-        "cola",
-        "orange",
-        "water",
-      ];
+      const sounds = Object.keys(prompts);
       const played = await page.evaluate(async (keys) => {
         const out = [];
         for (const key of keys) {
-          const audio = new Audio(`assets/audio/${key}.mp3`);
+          const audio = new Audio(`assets/audio/minimax/${key}.mp3`);
           await new Promise((resolve, reject) => {
             audio.addEventListener(
               "playing",
@@ -231,8 +216,8 @@ try {
         return out;
       }, sounds);
       check(
-        "15 个音频文件均真实触发 playing 且有有效时长",
-        played.length === 15 && played.every((x) => x.duration > 0),
+        `${sounds.length} 个 MiniMax 音频均真实触发 playing 且有有效时长`,
+        played.length === sounds.length && played.every((x) => x.duration > 0),
       );
       report.audio = played;
     }

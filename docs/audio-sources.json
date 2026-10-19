@@ -1,7 +1,9 @@
 {
-  "engine": "macOS say",
-  "voice": "Tingting",
-  "rate": 155,
+  "engine": "MiniMax",
+  "endpoint": "https://api.minimax.cn/v1/t2a_v2",
+  "model": "speech-2.8-hd",
+  "voice_id": "Chinese_sweet_girl_nv1",
+  "speed": 1,
   "prompts": {
     "start": "选你想要的。不着急，慢慢看。",
     "main": "想吃哪个主食？选你想要的。不想要也可以。",
@@ -17,6 +19,1175 @@
     "corn": "玉米杯，大杯。一杯玉米。",
     "cola": "可口可乐，中杯。一杯可乐。",
     "orange": "美汁源阳光橙，中杯。一杯饮料。",
-    "water": "冰露饮用水。一瓶水。"
-  }
+    "water": "冰露饮用水。一瓶水。",
+    "name-bigmac": "巨无霸。",
+    "name-chicken": "麦香鸡。",
+    "name-fish": "麦香鱼。",
+    "name-cheese": "吉士汉堡包。",
+    "name-fries": "中份薯条。",
+    "name-nuggets": "五块麦乐鸡。",
+    "name-corn": "大杯玉米杯。",
+    "name-cola": "中杯可口可乐。",
+    "name-orange": "中杯美汁源阳光橙。",
+    "name-water": "冰露饮用水。",
+    "quantity-1": "一份。",
+    "quantity-2": "两份。",
+    "quantity-3": "三份。",
+    "quantity-4": "四份。",
+    "quantity-5": "五份。",
+    "recap-prefix": "我想要。",
+    "selected-prefix": "你选了。",
+    "original-prefix": "第一次交给家长时，选了这些。",
+    "empty": "今天先不选。请家长看看。"
+  },
+  "records": [
+    {
+      "key": "start",
+      "file": "web/assets/audio/minimax/start.mp3",
+      "createdAt": "2026-10-19T14:12:37.050Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "选你想要的。不着急，慢慢看。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 62772,
+      "sha256": "1d93345b7c62949abcbeebd10e8e3a67a2af97be37a7cddb88b705253cb56e60",
+      "durationMs": 3816,
+      "usageCharacters": 25
+    },
+    {
+      "key": "main",
+      "file": "web/assets/audio/minimax/main.mp3",
+      "createdAt": "2026-10-19T14:12:43.944Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "想吃哪个主食？选你想要的。不想要也可以。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 73716,
+      "sha256": "b94d45c7522ac6af5d759a24e4363ef213eaea4fb719b6752cd0917fd429c6d1",
+      "durationMs": 4500,
+      "usageCharacters": 37
+    },
+    {
+      "key": "side",
+      "file": "web/assets/audio/minimax/side.mp3",
+      "createdAt": "2026-10-19T14:12:50.785Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "想吃哪个小食？选你想要的。不想要也可以。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 81780,
+      "sha256": "cdccf5bab660ec3deae74f3a08147f652cb39cde98c639c80cf72bc0ec4f086a",
+      "durationMs": 5004,
+      "usageCharacters": 37
+    },
+    {
+      "key": "drink",
+      "file": "web/assets/audio/minimax/drink.mp3",
+      "createdAt": "2026-10-19T14:12:57.569Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "想喝什么？选你想要的。不想要也可以。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 78900,
+      "sha256": "5bfdc1c85b04bf523b5695dec0e88f4226a628ff872869f0964a9f3a5e7e06f5",
+      "durationMs": 4824,
+      "usageCharacters": 33
+    },
+    {
+      "key": "help",
+      "file": "web/assets/audio/minimax/help.mp3",
+      "createdAt": "2026-10-19T14:13:04.413Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "请家长或老师过来，陪你一起选择。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 56436,
+      "sha256": "240c5caa3c0a0ac34d5afa38839f98576727eb61d2e5de2393254722e22ef6aa",
+      "durationMs": 3420,
+      "usageCharacters": 30
+    },
+    {
+      "key": "bigmac",
+      "file": "web/assets/audio/minimax/bigmac.mp3",
+      "createdAt": "2026-10-19T14:13:11.059Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "巨无霸。一个汉堡。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 39156,
+      "sha256": "335873cc17bfdf0ae25a4ff9cd37c324824afc4ed4666e72ca9f9787bfaeb1c0",
+      "durationMs": 2340,
+      "usageCharacters": 16
+    },
+    {
+      "key": "chicken",
+      "file": "web/assets/audio/minimax/chicken.mp3",
+      "createdAt": "2026-10-19T14:13:17.775Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "麦香鸡。一个汉堡。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 40884,
+      "sha256": "307740f017c670bca9d592cd6c2e1c71ef5624bde099ffe720c59c30bbccdba2",
+      "durationMs": 2448,
+      "usageCharacters": 16
+    },
+    {
+      "key": "fish",
+      "file": "web/assets/audio/minimax/fish.mp3",
+      "createdAt": "2026-10-19T14:13:24.529Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "麦香鱼。一个汉堡。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 42612,
+      "sha256": "bd087b8fdf6318390708051fc5aa80b5f605ed2d39ebf86e7438439599f3d18e",
+      "durationMs": 2556,
+      "usageCharacters": 16
+    },
+    {
+      "key": "cheese",
+      "file": "web/assets/audio/minimax/cheese.mp3",
+      "createdAt": "2026-10-19T14:13:31.210Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "吉士汉堡包。一个汉堡。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 50676,
+      "sha256": "cc848da01dcbb69ec7f4c279e40f9619abcc9ad326e1b81549d65bcc081d231f",
+      "durationMs": 3060,
+      "usageCharacters": 20
+    },
+    {
+      "key": "fries",
+      "file": "web/assets/audio/minimax/fries.mp3",
+      "createdAt": "2026-10-19T14:13:37.958Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "薯条，中份。一份薯条。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 55860,
+      "sha256": "d04cf715b9f0300667dd10060bdbe6dc47bb7c384f9bf80fe51dfa320e8bc5ff",
+      "durationMs": 3384,
+      "usageCharacters": 19
+    },
+    {
+      "key": "nuggets",
+      "file": "web/assets/audio/minimax/nuggets.mp3",
+      "createdAt": "2026-10-19T14:13:44.708Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "麦乐鸡，五块。一份有五块。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 58740,
+      "sha256": "c65cf2558ee58c1818cc48ab5bc2ee6c8b019fafb16cc6bdf2781418f65ca47e",
+      "durationMs": 3564,
+      "usageCharacters": 23
+    },
+    {
+      "key": "corn",
+      "file": "web/assets/audio/minimax/corn.mp3",
+      "createdAt": "2026-10-19T14:13:51.513Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "玉米杯，大杯。一杯玉米。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 57588,
+      "sha256": "626af7f3a1e912553a9cb76acf2725fa3a0c64a539253bfd6001ad7a70d4021e",
+      "durationMs": 3492,
+      "usageCharacters": 21
+    },
+    {
+      "key": "cola",
+      "file": "web/assets/audio/minimax/cola.mp3",
+      "createdAt": "2026-10-19T14:13:58.475Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "可口可乐，中杯。一杯可乐。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 57588,
+      "sha256": "5f1e9ee5c84be59a53f87c53abdffe545f339a96a396e732f35c8d7aacd5a09d",
+      "durationMs": 3492,
+      "usageCharacters": 23
+    },
+    {
+      "key": "orange",
+      "file": "web/assets/audio/minimax/orange.mp3",
+      "createdAt": "2026-10-19T14:14:05.374Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "美汁源阳光橙，中杯。一杯饮料。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 67380,
+      "sha256": "d7d5941cea526d49c19329afb942648125afd129f2e4980ca956ce0e61d7b086",
+      "durationMs": 4104,
+      "usageCharacters": 27
+    },
+    {
+      "key": "water",
+      "file": "web/assets/audio/minimax/water.mp3",
+      "createdAt": "2026-10-19T14:14:12.121Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "冰露饮用水。一瓶水。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 46068,
+      "sha256": "7db1c63ae1bfe993e4cd168970cbc6e23d2b697aad39291db52e8c97c525ce22",
+      "durationMs": 2772,
+      "usageCharacters": 18
+    },
+    {
+      "key": "name-bigmac",
+      "file": "web/assets/audio/minimax/name-bigmac.mp3",
+      "createdAt": "2026-10-19T14:14:18.809Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "巨无霸。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 20724,
+      "sha256": "e2c8c0826311c286b9dc4aa1ec167dbffc97fc8eb874a00d7dc35ae657ab5816",
+      "durationMs": 1188,
+      "usageCharacters": 7
+    },
+    {
+      "key": "name-chicken",
+      "file": "web/assets/audio/minimax/name-chicken.mp3",
+      "createdAt": "2026-10-19T14:14:25.687Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "麦香鸡。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 22452,
+      "sha256": "0751023a86d73c05a5af14299361f51e37c0334bbf9b5754bf4296326a51f851",
+      "durationMs": 1296,
+      "usageCharacters": 7
+    },
+    {
+      "key": "name-fish",
+      "file": "web/assets/audio/minimax/name-fish.mp3",
+      "createdAt": "2026-10-19T14:14:32.313Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "麦香鱼。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 20148,
+      "sha256": "ab5d7ad3083352ff656581348d8d696b569e1aec824f7174d6498954e5888637",
+      "durationMs": 1152,
+      "usageCharacters": 7
+    },
+    {
+      "key": "name-cheese",
+      "file": "web/assets/audio/minimax/name-cheese.mp3",
+      "createdAt": "2026-10-19T14:14:38.909Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "吉士汉堡包。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 25332,
+      "sha256": "9d2ee39e1e4280689a817b2f145e249c7061dde0cfac77532d2228e5d720d1a9",
+      "durationMs": 1476,
+      "usageCharacters": 11
+    },
+    {
+      "key": "name-fries",
+      "file": "web/assets/audio/minimax/name-fries.mp3",
+      "createdAt": "2026-10-19T14:14:45.549Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "中份薯条。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 25332,
+      "sha256": "f204b08381b2519981414c8c91526669a81b8df932489688fea5f4cfa6339db1",
+      "durationMs": 1476,
+      "usageCharacters": 9
+    },
+    {
+      "key": "name-nuggets",
+      "file": "web/assets/audio/minimax/name-nuggets.mp3",
+      "createdAt": "2026-10-19T14:14:52.241Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "五块麦乐鸡。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 24756,
+      "sha256": "42d613d01afec0c15bd679ec37873b5e34c6af5d197bd646952275b7a30f1f9d",
+      "durationMs": 1440,
+      "usageCharacters": 11
+    },
+    {
+      "key": "name-corn",
+      "file": "web/assets/audio/minimax/name-corn.mp3",
+      "createdAt": "2026-10-19T14:14:58.889Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "大杯玉米杯。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 26484,
+      "sha256": "3dea273b1893af5a21fdec605c5c210cb5bec59fe933df7235752300b9146cb1",
+      "durationMs": 1548,
+      "usageCharacters": 11
+    },
+    {
+      "key": "name-cola",
+      "file": "web/assets/audio/minimax/name-cola.mp3",
+      "createdAt": "2026-10-19T14:15:05.577Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "中杯可口可乐。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 31668,
+      "sha256": "1f6e8bfd04f3095001ea23e33153722fa3911e89d46cd6260b5fe56018a22c6c",
+      "durationMs": 1872,
+      "usageCharacters": 13
+    },
+    {
+      "key": "name-orange",
+      "file": "web/assets/audio/minimax/name-orange.mp3",
+      "createdAt": "2026-10-19T14:15:12.269Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "中杯美汁源阳光橙。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 42036,
+      "sha256": "498139db23b565510617f80cd53d04a92f84a2a1e8f024bd3f99dffbf26b167e",
+      "durationMs": 2520,
+      "usageCharacters": 17
+    },
+    {
+      "key": "name-water",
+      "file": "web/assets/audio/minimax/name-water.mp3",
+      "createdAt": "2026-10-19T14:15:18.916Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "冰露饮用水。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 27636,
+      "sha256": "1b51e984d1bd0bad4d68c88baa0e63b22ac4bde23ff68074b7e677236e236adf",
+      "durationMs": 1620,
+      "usageCharacters": 11
+    },
+    {
+      "key": "quantity-1",
+      "file": "web/assets/audio/minimax/quantity-1.mp3",
+      "createdAt": "2026-10-19T14:15:25.568Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "一份。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 16692,
+      "sha256": "b9bf233b7a35edb37c7dde2d745cd91fddcdebd88ac4238a346a5f3303dd67c2",
+      "durationMs": 936,
+      "usageCharacters": 5
+    },
+    {
+      "key": "quantity-2",
+      "file": "web/assets/audio/minimax/quantity-2.mp3",
+      "createdAt": "2026-10-19T14:15:32.168Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "两份。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 17268,
+      "sha256": "482dc7ec583a8f19797d4a420ea98f834b04e078338432b1dc7d6a62f43acdf8",
+      "durationMs": 972,
+      "usageCharacters": 5
+    },
+    {
+      "key": "quantity-3",
+      "file": "web/assets/audio/minimax/quantity-3.mp3",
+      "createdAt": "2026-10-19T14:15:38.763Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "三份。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 18996,
+      "sha256": "c51d8a6e356d52607593663bab4edf715a195c9185c9654b50ff052336777c58",
+      "durationMs": 1080,
+      "usageCharacters": 5
+    },
+    {
+      "key": "quantity-4",
+      "file": "web/assets/audio/minimax/quantity-4.mp3",
+      "createdAt": "2026-10-19T14:15:45.510Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "四份。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 18996,
+      "sha256": "a426da57f0c82e5043fdfa11f259c0b7ad927ae6a6b68c36e0e63bc656a338b5",
+      "durationMs": 1080,
+      "usageCharacters": 5
+    },
+    {
+      "key": "quantity-5",
+      "file": "web/assets/audio/minimax/quantity-5.mp3",
+      "createdAt": "2026-10-19T14:15:52.175Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "五份。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 18420,
+      "sha256": "fc043a03e2c26f15d063c7bf8ff45a70c100984798cfc0277325029e013fc60d",
+      "durationMs": 1044,
+      "usageCharacters": 5
+    },
+    {
+      "key": "recap-prefix",
+      "file": "web/assets/audio/minimax/recap-prefix.mp3",
+      "createdAt": "2026-10-19T14:15:58.816Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "我想要。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 19572,
+      "sha256": "6a92906bfe3d9694d67394463d3b01eef12e6ac509f59c5c0e1932e4ab634b4e",
+      "durationMs": 1116,
+      "usageCharacters": 7
+    },
+    {
+      "key": "selected-prefix",
+      "file": "web/assets/audio/minimax/selected-prefix.mp3",
+      "createdAt": "2026-10-19T14:16:05.417Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "你选了。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 19572,
+      "sha256": "dad457c1316436e222922fa417cfc151ca8368e5db6c554c10a11202540b4c52",
+      "durationMs": 1116,
+      "usageCharacters": 7
+    },
+    {
+      "key": "original-prefix",
+      "file": "web/assets/audio/minimax/original-prefix.mp3",
+      "createdAt": "2026-10-19T14:16:12.165Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "第一次交给家长时，选了这些。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 49524,
+      "sha256": "68a017145d13e3e70ad274f4668370c17382d9528663b92a45237a1780f84ad7",
+      "durationMs": 2988,
+      "usageCharacters": 26
+    },
+    {
+      "key": "empty",
+      "file": "web/assets/audio/minimax/empty.mp3",
+      "createdAt": "2026-10-19T14:16:18.882Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "今天先不选。请家长看看。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 46644,
+      "sha256": "d5465108b80d0538c9f498be848a6e306e10d73982c50bee040f032f0c854248",
+      "durationMs": 2808,
+      "usageCharacters": 22
+    },
+    {
+      "key": "video-0",
+      "file": ".local/video/minimax-0.mp3",
+      "createdAt": "2026-10-19T14:16:25.785Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "麦麦一起点，孩子慢慢选，家长接着买。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 69684,
+      "sha256": "fb90b2f7bc16b350c7882ece29720239be0e5ca08d15e8866d19d447496e9b86",
+      "durationMs": 4248,
+      "usageCharacters": 33
+    },
+    {
+      "key": "video-1",
+      "file": ".local/video/minimax-1.mp3",
+      "createdAt": "2026-10-19T14:16:32.636Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "家长先留下今天可以选的餐品。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 48948,
+      "sha256": "8e4bb3664c8f9409d2d3d08adf567c68f895fcdd67fd41312da745711f0a939c",
+      "durationMs": 2952,
+      "usageCharacters": 27
+    },
+    {
+      "key": "video-2",
+      "file": ".local/video/minimax-2.mp3",
+      "createdAt": "2026-10-19T14:16:39.628Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "鼠标停在图片上，就能听到名称。想好了，再点选这个。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 94452,
+      "sha256": "711abe6af75091c99bc995b8589835f699d76d3827be71cf68218144e22b31ee",
+      "durationMs": 5796,
+      "usageCharacters": 46
+    },
+    {
+      "key": "video-3",
+      "file": ".local/video/minimax-3.mp3",
+      "createdAt": "2026-10-19T14:16:46.404Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "每一类都能跳过。选好了，也能改主意。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 70836,
+      "sha256": "7ccf0f4467dbfdfc0fd6143940fea48adc98adc9d99584ffdf46530401d3cc90",
+      "durationMs": 4320,
+      "usageCharacters": 33
+    },
+    {
+      "key": "video-4",
+      "file": ".local/video/minimax-4.mp3",
+      "createdAt": "2026-10-19T14:16:53.307Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "用图片清单，回看自己的选择。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 51828,
+      "sha256": "b2632ea5aac6e8fdb470416f569de6ae8080900375c8fd2ce19c298411f009e9",
+      "durationMs": 3132,
+      "usageCharacters": 26
+    },
+    {
+      "key": "video-5",
+      "file": ".local/video/minimax-5.mp3",
+      "createdAt": "2026-10-19T14:17:00.205Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "家长接手，核对餐品和数量。调整都会留下记录。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 88692,
+      "sha256": "3461c2eff1efa41a756beeac06bc2b75cc0ebfa62d8f8663aefb65c37a7c4eda",
+      "durationMs": 5436,
+      "usageCharacters": 41
+    },
+    {
+      "key": "video-6",
+      "file": ".local/video/minimax-6.mp3",
+      "createdAt": "2026-10-19T14:17:07.059Z",
+      "request": {
+        "model": "speech-2.8-hd",
+        "text": "演示到这里结束。真实购买，将由家长确认和付款。",
+        "stream": false,
+        "output_format": "hex",
+        "voice_setting": {
+          "voice_id": "Chinese_sweet_girl_nv1",
+          "speed": 1,
+          "vol": 1,
+          "pitch": 0
+        },
+        "audio_setting": {
+          "sample_rate": 32000,
+          "bitrate": 128000,
+          "format": "mp3",
+          "channel": 1
+        },
+        "subtitle_enable": false
+      },
+      "bytes": 88692,
+      "sha256": "704c64dfd4e0ce85fbd38cfb8b5c91fc61bf6a155ff3753b95ac65c83bba62c5",
+      "durationMs": 5436,
+      "usageCharacters": 43
+    }
+  ]
 }
