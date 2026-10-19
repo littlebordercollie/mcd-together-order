@@ -1,0 +1,26 @@
+{
+  "name": "mcd-together-order",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "麦麦一起点：孩子慢慢选，家长接着买",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:browser": "node scripts/browser-test.mjs",
+    "build": "node scripts/build.mjs",
+    "mcp:inspect": "node --env-file-if-exists=.env scripts/inspect-mcp.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "ajv": "8.20.0",
+    "qrcode": "1.5.4"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1",
+    "prettier": "3.9.10"
+  }
+}

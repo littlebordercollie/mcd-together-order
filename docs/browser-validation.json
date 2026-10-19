@@ -1,0 +1,186 @@
+{
+  "at": "2026-10-19T10:59:20.245Z",
+  "checks": [
+    "desktop/welcome: 无横向溢出",
+    "desktop/welcome: 图片实际加载",
+    "desktop/prepare: 无横向溢出",
+    "desktop/prepare: 图片实际加载",
+    "desktop: 家长可收起餐品",
+    "desktop: 开场提示真实触发 playing",
+    "desktop: 听餐品语音没有选择或加数量",
+    "desktop: 双击已选餐品仍为一份",
+    "desktop: 重复听不改选择",
+    "desktop: 换组保留原选择",
+    "desktop: 取消即时生效",
+    "desktop: 刷新继续原选择",
+    "desktop/choose: 无横向溢出",
+    "desktop/choose: 图片实际加载",
+    "desktop: 求助弹窗可见",
+    "desktop: 求助返回保留选择",
+    "desktop/recap: 无横向溢出",
+    "desktop/recap: 图片实际加载",
+    "desktop: 演示核价总额正确",
+    "desktop: 没有家长确认不能完成",
+    "desktop: 修改数量清除旧报价",
+    "desktop: 孩子原始选择没有被覆盖",
+    "desktop: 修改记录可见",
+    "desktop/review: 无横向溢出",
+    "desktop/review: 图片实际加载",
+    "desktop: 勾选后才可完成",
+    "desktop: 演示没有创建订单",
+    "desktop: 完成页明确没有扣款",
+    "desktop/done: 无横向溢出",
+    "desktop/done: 图片实际加载",
+    "15 个音频文件均真实触发 playing 且有有效时长",
+    "desktop: 什么都不选也能完成沟通且不创建订单",
+    "tablet/welcome: 无横向溢出",
+    "tablet/welcome: 图片实际加载",
+    "tablet/prepare: 无横向溢出",
+    "tablet/prepare: 图片实际加载",
+    "tablet: 家长可收起餐品",
+    "tablet: 开场提示真实触发 playing",
+    "tablet: 听餐品语音没有选择或加数量",
+    "tablet: 双击已选餐品仍为一份",
+    "tablet: 重复听不改选择",
+    "tablet: 换组保留原选择",
+    "tablet: 取消即时生效",
+    "tablet: 刷新继续原选择",
+    "tablet/choose: 无横向溢出",
+    "tablet/choose: 图片实际加载",
+    "tablet: 求助弹窗可见",
+    "tablet: 求助返回保留选择",
+    "tablet/recap: 无横向溢出",
+    "tablet/recap: 图片实际加载",
+    "tablet: 演示核价总额正确",
+    "tablet: 没有家长确认不能完成",
+    "tablet: 修改数量清除旧报价",
+    "tablet: 孩子原始选择没有被覆盖",
+    "tablet: 修改记录可见",
+    "tablet/review: 无横向溢出",
+    "tablet/review: 图片实际加载",
+    "tablet: 勾选后才可完成",
+    "tablet: 演示没有创建订单",
+    "tablet: 完成页明确没有扣款",
+    "tablet/done: 无横向溢出",
+    "tablet/done: 图片实际加载",
+    "tablet: 什么都不选也能完成沟通且不创建订单",
+    "mobile/welcome: 无横向溢出",
+    "mobile/welcome: 图片实际加载",
+    "mobile/prepare: 无横向溢出",
+    "mobile/prepare: 图片实际加载",
+    "mobile: 家长可收起餐品",
+    "mobile: 开场提示真实触发 playing",
+    "mobile: 听餐品语音没有选择或加数量",
+    "mobile: 双击已选餐品仍为一份",
+    "mobile: 重复听不改选择",
+    "mobile: 换组保留原选择",
+    "mobile: 取消即时生效",
+    "mobile: 刷新继续原选择",
+    "mobile/choose: 无横向溢出",
+    "mobile/choose: 图片实际加载",
+    "mobile: 固定餐盘条在可见视窗内",
+    "mobile: 求助弹窗可见",
+    "mobile: 求助返回保留选择",
+    "mobile/recap: 无横向溢出",
+    "mobile/recap: 图片实际加载",
+    "mobile: 演示核价总额正确",
+    "mobile: 没有家长确认不能完成",
+    "mobile: 修改数量清除旧报价",
+    "mobile: 孩子原始选择没有被覆盖",
+    "mobile: 修改记录可见",
+    "mobile/review: 无横向溢出",
+    "mobile/review: 图片实际加载",
+    "mobile: 勾选后才可完成",
+    "mobile: 演示没有创建订单",
+    "mobile: 完成页明确没有扣款",
+    "mobile/done: 无横向溢出",
+    "mobile/done: 图片实际加载",
+    "mobile: 什么都不选也能完成沟通且不创建订单",
+    "所有流程没有浏览器脚本异常",
+    "缺少页面凭证时拒绝订单请求"
+  ],
+  "screenshots": [
+    "welcome-desktop.png",
+    "prepare-desktop.png",
+    "choose-desktop.png",
+    "recap-desktop.png",
+    "review-desktop.png",
+    "done-desktop.png",
+    "welcome-tablet.png",
+    "prepare-tablet.png",
+    "choose-tablet.png",
+    "recap-tablet.png",
+    "review-tablet.png",
+    "done-tablet.png",
+    "welcome-mobile.png",
+    "prepare-mobile.png",
+    "choose-mobile.png",
+    "recap-mobile.png",
+    "review-mobile.png",
+    "done-mobile.png"
+  ],
+  "errors": [],
+  "audio": [
+    {
+      "key": "start",
+      "duration": 3.093469
+    },
+    {
+      "key": "main",
+      "duration": 4.309977
+    },
+    {
+      "key": "side",
+      "duration": 4.368027
+    },
+    {
+      "key": "drink",
+      "duration": 3.775918
+    },
+    {
+      "key": "help",
+      "duration": 3.778413
+    },
+    {
+      "key": "bigmac",
+      "duration": 1.679138
+    },
+    {
+      "key": "chicken",
+      "duration": 1.872744
+    },
+    {
+      "key": "fish",
+      "duration": 1.779864
+    },
+    {
+      "key": "cheese",
+      "duration": 2.280726
+    },
+    {
+      "key": "fries",
+      "duration": 2.601859
+    },
+    {
+      "key": "nuggets",
+      "duration": 2.871247
+    },
+    {
+      "key": "corn",
+      "duration": 2.406576
+    },
+    {
+      "key": "cola",
+      "duration": 2.754739
+    },
+    {
+      "key": "orange",
+      "duration": 3.347664
+    },
+    {
+      "key": "water",
+      "duration": 2.18263
+    }
+  ],
+  "passed": true
+}

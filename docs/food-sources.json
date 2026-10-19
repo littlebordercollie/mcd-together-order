@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-10-19T10:39:04.414Z",
+  "note": "官网历史媒体图用于演示，真实菜单使用 MCP 当前图片。图片权利归原权利人，不属于代码许可证。",
+  "images": [
+    {
+      "id": "bigmac",
+      "name": "巨无霸",
+      "source": "https://www.mcdonalds.com.cn/media/product",
+      "url": "https://officiaweb-afd.mcdonalds.com.cn/public/upload/photo_db/2017/01/11/201701111552327010/201701111552327010_640_480.jpg?&rand=0827",
+      "file": "assets/food/bigmac.jpg",
+      "bytes": 78432,
+      "sha256": "bcdf16d16f7a3eaa9fac832d6dec6511a77224088db6d3eead76e86ebdb2b1cd"
+    },
+    {
+      "id": "chicken",
+      "name": "麦香鸡",
+      "source": "https://www.mcdonalds.com.cn/media/product",
+      "url": "https://officiaweb-afd.mcdonalds.com.cn/public/upload/photo_db/2017/01/11/201701111554599807/201701111554599807_640_480.jpg?&rand=0827",
+      "file": "assets/food/chicken.jpg",
+      "bytes": 57882,
+      "sha256": "bd7ad13bde1f0975db26801f5c302cf71745fd78b22e036a27a2814b28fc9948"
+    },
+    {
+      "id": "fish",
+      "name": "麦香鱼",
+      "source": "https://www.mcdonalds.com.cn/media/product",
+      "url": "https://officiaweb-afd.mcdonalds.com.cn/public/upload/photo_db/2017/01/11/201701111555445837/201701111555445837_640_480.jpg?&rand=0827",
+      "file": "assets/food/fish.jpg",
+      "bytes": 42977,
+      "sha256": "2b315d0e483d57afa0e65a9385e430c52817002aa3e441feb01849ee1a1ffde4"
+    },
+    {
+      "id": "cheese",
+      "name": "吉士汉堡包",
+      "source": "https://www.mcdonalds.com.cn/media/product",
+      "url": "https://officiaweb-afd.mcdonalds.com.cn/public/upload/photo_db/2017/01/11/201701111551492349/201701111551492349_640_480.jpg?&rand=0827",
+      "file": "assets/food/cheese.jpg",
+      "bytes": 37962,
+      "sha256": "aa5fc848b25061f5005f5d5f27dc7437f3c26c0781a3f37345bbd217a58fabb7"
+    },
+    {
+      "id": "fries",
+      "name": "薯条中",
+      "source": "https://www.mcdonalds.com.cn/media/product",
+      "url": "https://officiaweb-afd.mcdonalds.com.cn/public/upload/photo_db/2017/01/11/201701111600118272/201701111600118272_640_480.jpg?&rand=0827",
+      "file": "assets/food/fries.jpg",
+      "bytes": 35504,
+      "sha256": "e52357b577dba7c9e85f750fb6595cb319d0c119f4948f64ca9ffd2c648c0954"
+    },
+    {
+      "id": "nuggets",
+      "name": "麦乐鸡5块",
+      "source": "https://www.mcdonalds.com.cn/media/product",
+      "url": "https://officiaweb-afd.mcdonalds.com.cn/public/upload/photo_db/2017/01/11/201701111554414254/201701111554414254_640_480.jpg?&rand=0827",
+      "file": "assets/food/nuggets.jpg",
+      "bytes": 44781,
+      "sha256": "d7f5ebad6cd70a3fd6d4be21cbb80940e1dcc8d8c4504aab79241a7093187895"
+    },
+    {
+      "id": "corn",
+      "name": "大玉米杯",
+      "source": "https://www.mcdonalds.com.cn/media/product",
+      "url": "https://officiaweb-afd.mcdonalds.com.cn/public/upload/photo_db/2017/01/11/201701111550334743/201701111550334743_640_480.jpg?&rand=0827",
+      "file": "assets/food/corn.jpg",
+      "bytes": 60497,
+      "sha256": "bd83f7cf48f426eee42a386afd76fbea5bc0f6016db2dd9f59804fd3d34be848"
+    },
+    {
+      "id": "cola",
+      "name": "可口可乐",
+      "source": "https://www.mcdonalds.com.cn/media/product",
+      "url": "https://officiaweb-afd.mcdonalds.com.cn/public/upload/photo_db/2017/01/11/201701111553075221/201701111553075221_640_480.jpg?&rand=0827",
+      "file": "assets/food/cola.jpg",
+      "bytes": 46447,
+      "sha256": "dde156ebb8a983a1538f3216bda77845e3d6118604e745eec04f75f98bf405d5"
+    },
+    {
+      "id": "orange",
+      "name": "美汁源阳光橙",
+      "source": "https://www.mcdonalds.com.cn/media/product",
+      "url": "https://officiaweb-afd.mcdonalds.com.cn/public/upload/photo_db/2017/01/11/201701111557328361/201701111557328361_640_480.jpg?&rand=0827",
+      "file": "assets/food/orange.jpg",
+      "bytes": 41818,
+      "sha256": "66671055f7e0f0c7f4125c1718a6f060e0bd69f04515b7486a76071db9da9061"
+    },
+    {
+      "id": "water",
+      "name": "冰露包装饮用水",
+      "source": "https://www.mcdonalds.com.cn/media/product",
+      "url": "https://officiaweb-afd.mcdonalds.com.cn/public/upload/photo_db/2017/01/11/201701111549358444/201701111549358444_640_480.jpg?&rand=0827",
+      "file": "assets/food/water.jpg",
+      "bytes": 31885,
+      "sha256": "8a9140274fe2030d35eef789dd78d4785a1c8a9f720fb185d7676eaa54500742"
+    }
+  ]
+}
