@@ -1,7 +1,16 @@
+const audioRoot = "assets/audio/minimax/";
 let active = null;
 let run = 0;
-let enabled = false;
 let timer;
+function markSpeaking(element, speaking) {
+  element?.classList.toggle("speaking", speaking);
+  const button = element?.matches(".listen")
+    ? element
+    : element?.querySelector(".listen");
+  button?.classList.toggle("speaking", speaking);
+  const label = button?.querySelector("span");
+  if (label) label.textContent = speaking ? "正在播放" : "听一听";
+}
 export function stopAudio() {
   clearTimeout(timer);
   run++;
@@ -9,65 +18,99 @@ export function stopAudio() {
     active.pause();
     active = null;
   }
-  globalThis.speechSynthesis?.cancel();
   document
     .querySelectorAll(".speaking")
-    .forEach((e) => e.classList.remove("speaking"));
+    .forEach((el) => markSpeaking(el, false));
 }
-export function enableVoice() {
-  enabled = true;
-}
-export function speak(text, key, button) {
+export function speak(key, element) {
   stopAudio();
-  enabled = true;
   const current = run;
-  button?.classList.add("speaking");
-  const done = () => {
-    if (current === run) button?.classList.remove("speaking");
+  const keys = Array.isArray(key)
+    ? key
+    : String(key || "")
+        .split("|")
+        .filter(Boolean);
+  const finish = () => {
+    if (current === run) markSpeaking(element, false);
   };
-  const fallback = () => {
+  const fail = (error) => {
     if (current !== run) return;
-    if (!globalThis.speechSynthesis) {
-      done();
-      document.dispatchEvent(new CustomEvent("audio-error"));
+    finish();
+    document.dispatchEvent(
+      new CustomEvent("audio-error", {
+        detail: { needsGesture: error?.name === "NotAllowedError" },
+      }),
+    );
+  };
+  if (!keys.length || keys.some((value) => !/^[a-z0-9-]+$/.test(value))) {
+    fail();
+    return;
+  }
+  markSpeaking(element, true);
+  let index = 0;
+  const next = () => {
+    if (current !== run) return;
+    if (index === keys.length) {
+      active = null;
+      finish();
       return;
     }
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = "zh-CN";
-    u.rate = 0.82;
-    u.voice =
-      speechSynthesis.getVoices().find((v) => v.lang === "zh-CN") || null;
-    u.onend = done;
-    u.onerror = () => {
-      done();
-      document.dispatchEvent(new CustomEvent("audio-error"));
-    };
-    speechSynthesis.speak(u);
+    active = new Audio(audioRoot + keys[index++] + ".mp3");
+    active.onended = next;
+    active.onerror = fail;
+    active.play().catch(fail);
   };
-  if (key) {
-    active = new Audio(`assets/audio/${key}.mp3`);
-    active.onended = done;
-    active.onerror = fallback;
-    active.play().catch(fallback);
-  } else fallback();
+  next();
 }
 export function bindHoverAudio(root) {
-  root.addEventListener("pointerover", (e) => {
-    if (!enabled || !matchMedia("(hover:hover)").matches) return;
-    const b = e.target.closest("[data-listen]");
-    if (b) {
+  let target = null;
+  const source = (node) =>
+    node instanceof Element
+      ? node.closest("[data-audio-hover]") || node.closest("[data-listen]")
+      : null;
+  const schedule = (element) => {
+    clearTimeout(timer);
+    target = element;
+    if (!element) return;
+    timer = setTimeout(() => {
+      if (element.isConnected && target === element)
+        speak(element.dataset.audioHover || element.dataset.listen, element);
+    }, 450);
+  };
+  root.addEventListener("pointerover", (event) => {
+    if (event.pointerType === "touch" || !matchMedia("(hover:hover)").matches)
+      return;
+    const next = source(event.target);
+    if (
+      !next?.matches("[data-audio-hover]") &&
+      next !== source(event.relatedTarget)
+    )
+      schedule(next);
+  });
+  root.addEventListener("pointermove", (event) => {
+    if (
+      event.pointerType === "touch" ||
+      !matchMedia("(hover:hover)").matches ||
+      !(event.movementX || event.movementY)
+    )
+      return;
+    const next = source(event.target);
+    if (next?.matches("[data-audio-hover]") && next !== target) schedule(next);
+  });
+  root.addEventListener("pointerout", (event) => {
+    if (source(event.target) !== source(event.relatedTarget)) {
       clearTimeout(timer);
-      timer = setTimeout(() => speak(b.dataset.text, b.dataset.listen, b), 450);
+      target = null;
     }
   });
-  root.addEventListener("pointerout", () => clearTimeout(timer));
-  // Focus announces only after the user has explicitly enabled speech.
-  root.addEventListener("focusin", (e) => {
-    const b = e.target.closest("[data-listen]");
-    if (enabled && b) {
+  root.addEventListener("focusin", (event) => {
+    const next = source(event.target);
+    if (next !== source(event.relatedTarget)) schedule(next);
+  });
+  root.addEventListener("focusout", (event) => {
+    if (source(event.target) !== source(event.relatedTarget)) {
       clearTimeout(timer);
-      timer = setTimeout(() => speak(b.dataset.text, b.dataset.listen, b), 450);
+      target = null;
     }
   });
-  root.addEventListener("focusout", () => clearTimeout(timer));
 }

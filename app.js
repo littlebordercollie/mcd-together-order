@@ -11,7 +11,7 @@ import {
 } from "./state.js";
 import { categories } from "./demo-data.js";
 import { configuration, api } from "./api.js";
-import { speak, stopAudio, bindHoverAudio, enableVoice } from "./audio.js";
+import { speak, stopAudio, bindHoverAudio } from "./audio.js";
 import {
   shell,
   welcome,
@@ -88,7 +88,7 @@ function parentHelp() {
     "我们一起看一看。",
     `${buddy("dialog-buddy")}<p>请家长或老师过来，<wbr>陪你一起选择。</p>${listen("请家长或老师过来，陪你一起选择。", "help")}<div class="dialog-actions"><button class="button secondary" data-action="close">我继续选</button><button class="button primary" data-action="help-parent">我是家长，查看清单</button></div>`,
   );
-  speak("请家长或老师过来，陪你一起选择。", "help");
+  speak("help");
 }
 async function run(button, fn) {
   if (busy) return;
@@ -236,7 +236,6 @@ async function act(action, id, button) {
       go("done");
       break;
     case "start":
-      enableVoice();
       state.category =
         categories.find((c) =>
           state.menu.some(
@@ -245,7 +244,7 @@ async function act(action, id, button) {
         )?.id || "main";
       state.group = 0;
       go("choose");
-      speak("选你想要的。不着急，慢慢看。", "start");
+      speak("start");
       break;
     case "category":
       stopAudio();
@@ -281,7 +280,7 @@ async function act(action, id, button) {
         return;
       }
       render();
-      speak(`你选了，${p.name}。`, p.audio);
+      speak(p.audio ? ["selected-prefix", "name-" + p.audio] : "");
       toast(`已选：${p.name}`);
       break;
     }
@@ -405,7 +404,7 @@ document.addEventListener("click", (e) => {
   }
   e.preventDefault();
   if (b.hasAttribute("data-listen")) {
-    speak(b.dataset.text, b.dataset.listen, b);
+    speak(b.dataset.listen, b);
     return;
   }
   act(b.dataset.action, b.dataset.id, b).catch((err) => toast(err.message));
@@ -443,8 +442,12 @@ document.addEventListener("submit", (e) => {
       : "没有找到当前可用门店，请换一个位置关键词。";
   });
 });
-document.addEventListener("audio-error", () =>
-  toast("语音暂时无法播放，可以先看图片和文字。"),
+document.addEventListener("audio-error", (event) =>
+  toast(
+    event.detail?.needsGesture
+      ? "先点一下听一听，就能开启悬停朗读。"
+      : "这项语音暂时无法播放，可以先看图片和文字。",
+  ),
 );
 modal.addEventListener("close", stopAudio);
 bindHoverAudio(root);
