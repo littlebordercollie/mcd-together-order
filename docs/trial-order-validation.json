@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-19T16:24:48.448Z",
+  "createdAt": "2026-10-19T16:21:34.217Z",
+  "queriedAt": "2026-10-19T16:24:08.205Z",
+  "server": "https://mcp.mcd.cn",
+  "realOrderCreateCalls": 1,
+  "created": true,
+  "store": {
+    "code": "1950147",
+    "name": "麦当劳北京回龙观西大街餐厅"
+  },
+  "items": [
+    {
+      "name": "4块麦乐鸡",
+      "quantity": 1,
+      "unitPriceYuan": "12"
+    }
+  ],
+  "quoteTotalFen": 1200,
+  "officialTotalYuan": "12",
+  "officialPayableYuan": "12",
+  "takeWay": "外带",
+  "officialStatus": "待支付",
+  "officialStatusCode": "10",
+  "paymentUrlHost": "m.mcd.cn",
+  "officialPaymentUrlReturned": true,
+  "knownOrderRecoveryVerified": true,
+  "paymentPerformed": false,
+  "paymentDeferredByUser": true,
+  "pickupVerified": false,
+  "unknownOrderRecoveryVerified": false,
+  "privateSourceSha256": "a05c227dc8806746f3d87c12418b517d374c6a71d418cd3d9b8ef38d6bc67844",
+  "notes": [
+    "Created exactly one approved order through the protected local /api/order endpoint after fresh price validation.",
+    "Recovered the known order through the guardian UI and queried its official status.",
+    "Official payment tab was created, but browser DOM reads timed out; full payment page rendering is not verified.",
+    "User deferred manual payment. Do not interpret an order or payment URL as payment success.",
+    "Live query returned orderStatus as text and status as a separate code; no unobserved status mapping is inferred.",
+    "Order identifier, payment URL, QR code and account data are retained only in ignored .local files."
+  ]
+}

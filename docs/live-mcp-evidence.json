@@ -138,5 +138,6 @@
     "Menu and availability change over time; initial filtered menu had 13 items and subsequent browser run had 12.",
     "Only public restaurant/product and quote fields are included; no account identifiers or payment links.",
     "Order creation, payment, pickup and recovery are not verified by these read-only calls."
-  ]
+  ],
+  "scope": "Read-only snapshot before the subsequently approved trial order; see trial-order-validation.json for later creation/query evidence."
 }
