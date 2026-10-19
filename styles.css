@@ -1064,7 +1064,7 @@ footer a {
   font-size: 18px;
   margin: 0 0 8px;
 }
-.review-name span {
+.review-name > span:not(.option-meta) {
   display: block;
   font-size: 11px;
   color: var(--muted);
@@ -2228,7 +2228,7 @@ button[aria-busy="true"] {
   .review-name h2 {
     font-size: 18px;
   }
-  .review-name span {
+  .review-name > span:not(.option-meta) {
     font-size: 10px;
   }
   .quantity-control {
@@ -2386,4 +2386,182 @@ button[aria-busy="true"] {
   .touch-tip {
     display: inline;
   }
+}
+
+/* One choice at a time: type, cup size, then ice. */
+.options-dialog {
+  width: min(720px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 32px;
+}
+.option-heading {
+  text-align: center;
+}
+.option-heading h2 {
+  margin: 8px 0 12px;
+}
+.option-heading h2:focus {
+  outline: none;
+}
+.option-current {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0;
+  padding: 12px 18px;
+  border-radius: 16px;
+  background: #f2f0e5;
+}
+.option-current img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.option-current div {
+  display: grid;
+  gap: 5px;
+}
+.option-current strong {
+  font-size: 19px;
+}
+.option-current span {
+  font-size: 14px;
+}
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.option-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px 8px;
+  background: #fffdf8;
+  border: 2px solid #d9ded8;
+  border-radius: 20px;
+  color: #243f53;
+  cursor: pointer;
+  min-height: 174px;
+}
+.option-card.active {
+  border-color: #315d4b;
+  background: #eaf1e5;
+  box-shadow: 0 3px 0 #315d4b;
+}
+.option-card strong {
+  font-size: 22px;
+  white-space: nowrap;
+}
+.option-card > span {
+  margin-top: 8px;
+  font-size: 13px;
+}
+.option-picture {
+  width: 100px;
+  height: 108px;
+}
+.option-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0 12px;
+}
+.option-note {
+  text-align: center;
+  font-size: 14px;
+  margin: 12px 0;
+  text-wrap: balance;
+}
+.option-footer {
+  display: grid;
+  gap: 8px;
+}
+.option-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin: 6px 0;
+  color: #395f4b;
+  font-size: 15px;
+}
+.option-meta span {
+  white-space: nowrap;
+}
+.option-edit {
+  margin: 8px 0;
+  font-size: 14px;
+  padding: 8px 12px;
+  min-height: 40px;
+}
+.configured-title .phrase {
+  display: inline-block;
+}
+@media (max-width: 600px) {
+  .options-dialog {
+    padding: 24px 16px 16px;
+    width: calc(100vw - 20px);
+    max-height: calc(100dvh - 20px);
+  }
+  .option-grid {
+    gap: 8px;
+  }
+  .option-card {
+    min-height: 146px;
+    padding: 10px 4px;
+    border-radius: 16px;
+  }
+  .option-card strong {
+    font-size: 18px;
+  }
+  .option-picture {
+    width: 78px;
+    height: 88px;
+  }
+  .option-current {
+    padding: 10px;
+    gap: 10px;
+    margin: 14px 0;
+  }
+  .option-current strong {
+    font-size: 17px;
+  }
+  .option-navigation {
+    margin: 16px 0 10px;
+    gap: 8px;
+  }
+  .option-meta {
+    font-size: 14px;
+  }
+}
+
+.review-name > strong {
+  display: block;
+  margin-top: 8px;
+}
+.review-name .option-meta {
+  font-size: 14px;
+}
+.original-item {
+  display: block;
+  margin-top: 10px;
+}
+.original-item .option-meta {
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+.change-detail {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 8px;
+  margin: 5px 0;
+}
+.change-detail > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+}
+.change-detail .phrase {
+  white-space: nowrap;
 }

@@ -49,3 +49,27 @@ export const demoMenu = [
   audio: id,
   source: "demo",
 }));
+
+// Illustrative options mirror the interaction; these identifiers never go to MCP.
+const demoCola = demoMenu.find((p) => p.id === "demo-cola");
+demoCola.name = "可乐";
+demoCola.audio = "live-cola";
+const demoIce = [
+  { key: "none", name: "去冰", audio: "ice-none" },
+  { key: "less", name: "少冰", audio: "ice-less" },
+  { key: "standard", name: "标准冰", audio: "ice-standard", isDefault: true },
+  { key: "more", name: "多冰", audio: "ice-more" },
+];
+demoCola.variants = ["regular", "zero"].flatMap((kind) =>
+  ["small", "medium", "large"].map((size, i) => ({
+    code: `demo-cola-${kind}-${size}`,
+    kind,
+    size,
+    name:
+      (kind === "zero" ? "无糖可口可乐" : "可乐") + ["小杯", "中杯", "大杯"][i],
+    audio: "cola-" + (kind === "zero" ? "zero-" : "") + size,
+    priceFen: [1100, 1150, 1350][i],
+    isDefault: kind === "regular" && size === "medium",
+    iceOptions: demoIce,
+  })),
+);
