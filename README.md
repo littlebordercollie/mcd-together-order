@@ -29,6 +29,10 @@
 
 ![学生图片选餐](docs/screenshots/choose-desktop.png)
 
+饮料规格逐步展开：先选普通或无糖，再选杯型与冰量。图示可以悬停听读，选完后再确认，也可以请家长一起选。
+
+![用图示选择杯型](docs/screenshots/options-live-size-preview.png)
+
 ## 当前交付状态
 
 | 能力 | 状态 |

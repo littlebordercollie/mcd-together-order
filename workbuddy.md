@@ -45,4 +45,4 @@ WorkBuddy 已处理 2m39s 我先读取技能定义 和 核 心 文 件 。
 - 增加“这次先不选”与“这次先不买”的完整出口。
 - 对报告中不准确或缺少比较证据的判断另行说明，见 [逐条复核](docs/REVIEW_RESOLUTION.md)。
 
-没有借此记录声称 WorkBuddy 已调用麦当劳 MCP、创建订单或付款。真实 MCP 联调按用户安排留待 Token 配置后完成。
+该次 WorkBuddy 审查没有调用麦当劳 MCP、创建订单或付款。后续在本机开发环境完成的真实 MCP 联调及一笔待支付订单，另见 [MCP 接入说明](MCP_INTEGRATION.md)；这些调用不归入 WorkBuddy 的使用记录。
