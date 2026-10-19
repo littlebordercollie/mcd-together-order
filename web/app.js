@@ -24,6 +24,7 @@ import {
   listen,
 } from "./views.js";
 import { icon, buddy } from "./icons.js";
+import { recoveryView } from "./recovery.js";
 const root = document.querySelector("#app"),
   modal = document.querySelector("#modal"),
   notice = document.querySelector("#notice");
@@ -99,7 +100,14 @@ async function run(button, fn) {
   try {
     await fn();
   } catch (err) {
-    toast(err.message);
+    if (err.code === "ORDER_RECOVERY_REQUIRED") {
+      config.hasPendingOrder = true;
+      render();
+      dialog(
+        "先找回这笔订单",
+        `<p>${esc(err.message)}</p><div class="dialog-actions"><button class="button secondary" data-action="close">稍后再看</button><button class="button primary" data-action="recovery">查询这笔订单</button></div>`,
+      );
+    } else toast(err.message);
   } finally {
     busy = false;
     if (button?.isConnected) {
@@ -160,6 +168,31 @@ async function act(action, id, button) {
       break;
     case "live":
       if (config.live) liveDialog();
+      break;
+    case "recovery":
+      await run(button, async () => {
+        const result = await api("order-recovery", {});
+        if (result.order) {
+          state.order = result.order;
+          close();
+          go("done");
+        } else dialog("找回刚才的订单", recoveryView(result));
+      });
+      break;
+    case "recover":
+      await run(button, async () => {
+        const confirm = [
+          ...modal.querySelectorAll("[data-recovery-confirm]"),
+        ].find((el) => el.dataset.recoveryConfirm === id);
+        if (!confirm?.checked)
+          throw new Error("请先核对门店、餐品、数量、金额和时间。");
+        state.order = await api("order-recover", {
+          orderId: id,
+          parentConfirmed: true,
+        });
+        close();
+        go("done");
+      });
       break;
     case "store":
       await run(button, () => loadStore(id));
@@ -378,6 +411,12 @@ document.addEventListener("click", (e) => {
   act(b.dataset.action, b.dataset.id, b).catch((err) => toast(err.message));
 });
 document.addEventListener("change", (e) => {
+  if (e.target.hasAttribute("data-recovery-confirm")) {
+    const b = e.target
+      .closest(".recovery-card")
+      .querySelector('[data-action="recover"]');
+    b.disabled = !e.target.checked;
+  }
   if (e.target.id === "parent-confirm") {
     const b = document.querySelector("#order-button");
     if (b)

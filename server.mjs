@@ -121,6 +121,13 @@ async function route(path, b) {
       return orders.quote(b.storeCode, b.items);
     case "/api/order":
       return withQR(await orders.create(b));
+    case "/api/order-recovery": {
+      const result = await orders.recovery();
+      if (result.order) result.order = await withQR(result.order);
+      return result;
+    }
+    case "/api/order-recover":
+      return withQR(await orders.recover(b));
     case "/api/order-status":
       return withQR(await orders.status(b.orderId));
     default:
@@ -144,7 +151,13 @@ const server = http.createServer(async (req, res) => {
     const url = new URL(req.url, `http://${host}:${port}`),
       path = decodeURIComponent(url.pathname);
     if (path === "/api/config" && req.method === "GET") {
-      json(res, 200, { live: !!token, orderEnabled, csrf });
+      const journal = await orders.journal();
+      json(res, 200, {
+        live: !!token,
+        orderEnabled,
+        csrf,
+        hasPendingOrder: !!journal && journal.state !== "closed",
+      });
       return;
     }
     if (path.startsWith("/api/")) {
@@ -194,6 +207,7 @@ const server = http.createServer(async (req, res) => {
       json(res, 400, {
         error:
           error instanceof SyntaxError ? "请求格式不正确。" : error.message,
+        code: error.code === "ORDER_RECOVERY_REQUIRED" ? error.code : undefined,
       });
   }
 });

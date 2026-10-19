@@ -1267,6 +1267,52 @@ footer a {
 .pay-block > p {
   font-size: 13px;
 }
+.recovery-card {
+  padding: 20px;
+  margin: 20px 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.recovery-card h3,
+.pay-block h2 {
+  font-size: 18px;
+  text-wrap: pretty;
+}
+.recovery-meta {
+  overflow-wrap: anywhere;
+}
+.recovery-card ul,
+.order-items {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+.recovery-card li,
+.order-items li,
+.recovery-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 10px 0;
+}
+.recovery-card li b,
+.order-items li b {
+  flex-shrink: 0;
+}
+.recovery-total {
+  padding: 14px 0;
+  margin-bottom: 20px;
+  border-top: 1px dashed var(--line);
+}
+.recovery-card .confirm-check {
+  align-items: flex-start;
+}
+dialog .recovery-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .pay-qr {
   width: 200px;
   height: 200px;

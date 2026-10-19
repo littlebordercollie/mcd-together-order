@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile, readdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
 const base = "https://littlebordercollie.github.io/mcd-together-order/";
 const report = { at: new Date().toISOString(), url: base, checks: [] };
@@ -26,6 +26,25 @@ try {
       .digest("hex"),
   );
   report.checks.push("公开 HTML 与本机构建字节一致");
+  const assets = (await readdir("dist")).filter((name) =>
+    /\.(js|css)$/.test(name),
+  );
+  for (const name of assets) {
+    const response = await page.request.get(new URL(name, base).href);
+    assert.equal(response.status(), 200, name);
+    assert.equal(
+      createHash("sha256")
+        .update(await response.body())
+        .digest("hex"),
+      createHash("sha256")
+        .update(await readFile(`dist/${name}`))
+        .digest("hex"),
+      `Published asset differs: ${name}`,
+    );
+  }
+  report.checks.push(
+    `公开脚本和样式与本机构建逐字节一致（${assets.length} 个文件）`,
+  );
   await page.getByRole("button", { name: "开始一起点", exact: true }).click();
   await page.getByRole("button", { name: "准备好了，交给孩子" }).click();
   await page.getByRole("button", { name: "选择麦香鸡", exact: true }).click();
