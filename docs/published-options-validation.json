@@ -1,0 +1,570 @@
+{
+  "at": "2026-10-19T16:49:14.927Z",
+  "url": "https://littlebordercollie.github.io/mcd-together-order/",
+  "deploymentHead": "e194f2e81207637e106aeb9ddb26bef0c1e3eebd",
+  "passed": true,
+  "htmlFiles": 1,
+  "scriptStyleFiles": 11,
+  "audioFiles": 99,
+  "checks": [
+    "All responses HTTP 200",
+    "All published bytes match local build"
+  ],
+  "files": [
+    {
+      "path": "api.js",
+      "bytes": 1080,
+      "sha256": "cdd9f991cdf960ed518bf4faf9627b766de930c3f5e5c4da6d7209cbe9e4a881"
+    },
+    {
+      "path": "app.js",
+      "bytes": 17952,
+      "sha256": "1f9a41c70f3171a0989ad62a1acc4418f76f80b3cb1253ebc13f7f368b3b3ded"
+    },
+    {
+      "path": "assets/audio/minimax/bigmac.mp3",
+      "bytes": 39156,
+      "sha256": "335873cc17bfdf0ae25a4ff9cd37c324824afc4ed4666e72ca9f9787bfaeb1c0"
+    },
+    {
+      "path": "assets/audio/minimax/cheese.mp3",
+      "bytes": 50676,
+      "sha256": "cc848da01dcbb69ec7f4c279e40f9619abcc9ad326e1b81549d65bcc081d231f"
+    },
+    {
+      "path": "assets/audio/minimax/chicken.mp3",
+      "bytes": 40884,
+      "sha256": "307740f017c670bca9d592cd6c2e1c71ef5624bde099ffe720c59c30bbccdba2"
+    },
+    {
+      "path": "assets/audio/minimax/cola-large.mp3",
+      "bytes": 23028,
+      "sha256": "0f9839bb1ebc49091cc809a0e1c471f8a18ea937dbf70950dae0190b08c558c3"
+    },
+    {
+      "path": "assets/audio/minimax/cola-medium.mp3",
+      "bytes": 21300,
+      "sha256": "dab0fba5885f32b8aa916e6dbf21cf9c15e2dd23fa66128abae4bc4a51e8578b"
+    },
+    {
+      "path": "assets/audio/minimax/cola-small.mp3",
+      "bytes": 23028,
+      "sha256": "58aeb55974e5b82b1a21ee09e9478f670843ca74ead3af59ca5d0584af0bcc40"
+    },
+    {
+      "path": "assets/audio/minimax/cola-zero-large.mp3",
+      "bytes": 32820,
+      "sha256": "3480898e749370ebd7449d5e6b59c8b8f54d7bc0780d5819b28624f60e8efaf5"
+    },
+    {
+      "path": "assets/audio/minimax/cola-zero-medium.mp3",
+      "bytes": 33396,
+      "sha256": "499bcb004214f7c7812988502cc3854a64c2232b9e4baaaf7c162394fe85e12c"
+    },
+    {
+      "path": "assets/audio/minimax/cola-zero-small.mp3",
+      "bytes": 35124,
+      "sha256": "ddc833afb6c14e6c6215f1ffa22125fa61b6ffb4028f6b5417f440d3f3917cb2"
+    },
+    {
+      "path": "assets/audio/minimax/cola.mp3",
+      "bytes": 57588,
+      "sha256": "5f1e9ee5c84be59a53f87c53abdffe545f339a96a396e732f35c8d7aacd5a09d"
+    },
+    {
+      "path": "assets/audio/minimax/corn.mp3",
+      "bytes": 57588,
+      "sha256": "626af7f3a1e912553a9cb76acf2725fa3a0c64a539253bfd6001ad7a70d4021e"
+    },
+    {
+      "path": "assets/audio/minimax/drink.mp3",
+      "bytes": 78900,
+      "sha256": "5bfdc1c85b04bf523b5695dec0e88f4226a628ff872869f0964a9f3a5e7e06f5"
+    },
+    {
+      "path": "assets/audio/minimax/empty.mp3",
+      "bytes": 46644,
+      "sha256": "d5465108b80d0538c9f498be848a6e306e10d73982c50bee040f032f0c854248"
+    },
+    {
+      "path": "assets/audio/minimax/fish.mp3",
+      "bytes": 42612,
+      "sha256": "bd087b8fdf6318390708051fc5aa80b5f605ed2d39ebf86e7438439599f3d18e"
+    },
+    {
+      "path": "assets/audio/minimax/fries.mp3",
+      "bytes": 55860,
+      "sha256": "d04cf715b9f0300667dd10060bdbe6dc47bb7c384f9bf80fe51dfa320e8bc5ff"
+    },
+    {
+      "path": "assets/audio/minimax/help.mp3",
+      "bytes": 56436,
+      "sha256": "240c5caa3c0a0ac34d5afa38839f98576727eb61d2e5de2393254722e22ef6aa"
+    },
+    {
+      "path": "assets/audio/minimax/ice-less.mp3",
+      "bytes": 16692,
+      "sha256": "cde31797f1cec2a402e5941e3ed2277cccbd8d1ad4558f6b0c01a9c7ffac5898"
+    },
+    {
+      "path": "assets/audio/minimax/ice-more.mp3",
+      "bytes": 18420,
+      "sha256": "285d53f0a88a42fd1bc1a6487b4b3cbde49cbdd04f40351a818b77ec8f743d89"
+    },
+    {
+      "path": "assets/audio/minimax/ice-none.mp3",
+      "bytes": 32244,
+      "sha256": "5bf48295ac3e2d7b29a7759695a64d9ef6fceefd072668aa03632bb3aabea072"
+    },
+    {
+      "path": "assets/audio/minimax/ice-standard.mp3",
+      "bytes": 20148,
+      "sha256": "661f6d24f98d4b7d51321051ca724673c7e719e9d02c92cee55134ddba2d635b"
+    },
+    {
+      "path": "assets/audio/minimax/kind-regular.mp3",
+      "bytes": 18420,
+      "sha256": "2e6c5a2407d639e112b8170f8a6c345c74722afcff09515731e049f5b1424e25"
+    },
+    {
+      "path": "assets/audio/minimax/kind-zero.mp3",
+      "bytes": 24180,
+      "sha256": "cc5e860e8899151a91c150dfedf8b727233e2f4548b0348e399cfd88dfc1e361"
+    },
+    {
+      "path": "assets/audio/minimax/live-1106.mp3",
+      "bytes": 44340,
+      "sha256": "8de294d35ee4f32882180d845f39c72333f6141222f92c53c02b0f6655accfb0"
+    },
+    {
+      "path": "assets/audio/minimax/live-1120.mp3",
+      "bytes": 29364,
+      "sha256": "93aee26188473d4e1545a814eb28e05713d37a798b4c6a8887e55a8a065a5aae"
+    },
+    {
+      "path": "assets/audio/minimax/live-1401.mp3",
+      "bytes": 33396,
+      "sha256": "8b319d2c2e4191001e7b26328c8ecf7d469889fc8807090ba338784b975a86ac"
+    },
+    {
+      "path": "assets/audio/minimax/live-1406.mp3",
+      "bytes": 26484,
+      "sha256": "7888d2f8e733ac6af89668fc98115ccf12ef797f998da3e1ac95c784c309e4cf"
+    },
+    {
+      "path": "assets/audio/minimax/live-1440.mp3",
+      "bytes": 28212,
+      "sha256": "f8bee0cabeb70dfdfc4b771245d77a4f1fc586796ec7fc81797b27afb248ce3f"
+    },
+    {
+      "path": "assets/audio/minimax/live-3010.mp3",
+      "bytes": 33396,
+      "sha256": "5320565ef052298be3022e56577a2485f5a0792b6ad3849cbbce739fced2c4dd"
+    },
+    {
+      "path": "assets/audio/minimax/live-3755.mp3",
+      "bytes": 26484,
+      "sha256": "bd4d3f5badc7644fb57b560fd3fd06db32ec26cd6c523eefc7405fd70c40d32f"
+    },
+    {
+      "path": "assets/audio/minimax/live-4437.mp3",
+      "bytes": 27060,
+      "sha256": "d0d26ec49936a5988c869285894abd50cee4b7037f0d262703b2a9ebb739bfae"
+    },
+    {
+      "path": "assets/audio/minimax/live-4648.mp3",
+      "bytes": 38004,
+      "sha256": "8582785f5c2814a8f9ffa06e3c29f88d8b33ab6c52ffa0bbd553f8d9eb0a606d"
+    },
+    {
+      "path": "assets/audio/minimax/live-4810.mp3",
+      "bytes": 20724,
+      "sha256": "5528f21c616312f6f9f927ba2bd904432a272d211aa1644d3e7521dc8f63a85c"
+    },
+    {
+      "path": "assets/audio/minimax/live-507394.mp3",
+      "bytes": 26484,
+      "sha256": "fbbbc7f42c10a9fec0ec128565e3c7c78edbf28d7b413087d1b6070e4cebeacd"
+    },
+    {
+      "path": "assets/audio/minimax/live-511781.mp3",
+      "bytes": 38004,
+      "sha256": "efede0e4613a8bbcda7cd845bf248fe6701b67f8cb64b250d954155a63ff58c2"
+    },
+    {
+      "path": "assets/audio/minimax/live-521143.mp3",
+      "bytes": 25332,
+      "sha256": "eea7bc504ad6cc717b67b437a07e1357a39ae8e1714168516fb9a92e782613f6"
+    },
+    {
+      "path": "assets/audio/minimax/live-521915.mp3",
+      "bytes": 38004,
+      "sha256": "75408f7ebd1b79a0bdca6eb803a1ad21676a4dd267a5b8cb4b85d65da386e8fe"
+    },
+    {
+      "path": "assets/audio/minimax/live-521952.mp3",
+      "bytes": 29364,
+      "sha256": "4c0a9ffe62ff428011dd2974f5cba6df3ea9e7f79a21328cc2527460aa9d2fde"
+    },
+    {
+      "path": "assets/audio/minimax/live-521953.mp3",
+      "bytes": 41460,
+      "sha256": "b43a56f5517af1dbf077ea659cf6349ba5da21f55c484238c6fcf8a42d06c056"
+    },
+    {
+      "path": "assets/audio/minimax/live-6352.mp3",
+      "bytes": 33396,
+      "sha256": "c544fb38d9da8bc6ec25325e972d8daa5e931ac63f55e390f37cade877c7fd43"
+    },
+    {
+      "path": "assets/audio/minimax/live-cola.mp3",
+      "bytes": 19572,
+      "sha256": "82c2559b836884f0c029af910ecd382049e9cb469667e81c7ba65332465b0b30"
+    },
+    {
+      "path": "assets/audio/minimax/main.mp3",
+      "bytes": 73716,
+      "sha256": "b94d45c7522ac6af5d759a24e4363ef213eaea4fb719b6752cd0917fd429c6d1"
+    },
+    {
+      "path": "assets/audio/minimax/name-bigmac.mp3",
+      "bytes": 20724,
+      "sha256": "e2c8c0826311c286b9dc4aa1ec167dbffc97fc8eb874a00d7dc35ae657ab5816"
+    },
+    {
+      "path": "assets/audio/minimax/name-cheese.mp3",
+      "bytes": 25332,
+      "sha256": "9d2ee39e1e4280689a817b2f145e249c7061dde0cfac77532d2228e5d720d1a9"
+    },
+    {
+      "path": "assets/audio/minimax/name-chicken.mp3",
+      "bytes": 22452,
+      "sha256": "0751023a86d73c05a5af14299361f51e37c0334bbf9b5754bf4296326a51f851"
+    },
+    {
+      "path": "assets/audio/minimax/name-cola-large.mp3",
+      "bytes": 24180,
+      "sha256": "c5d3b4163bdf079e13194d66b87d29e247ff22e7a27cb46a531f8ef907e96f9f"
+    },
+    {
+      "path": "assets/audio/minimax/name-cola-medium.mp3",
+      "bytes": 23028,
+      "sha256": "ac81d99675a4bb9c5e7100a79eca83dcc7f79240cae5232ee57fd8eeffd6a5a3"
+    },
+    {
+      "path": "assets/audio/minimax/name-cola-small.mp3",
+      "bytes": 21300,
+      "sha256": "afb8cff70553907315b77dae3324003c34ee1fca5534c2f81e01f1efef1d43ca"
+    },
+    {
+      "path": "assets/audio/minimax/name-cola-zero-large.mp3",
+      "bytes": 34548,
+      "sha256": "d189a849f30a5af188e1a646473eb3a48c2dd79cb814aec9644a9891389ea970"
+    },
+    {
+      "path": "assets/audio/minimax/name-cola-zero-medium.mp3",
+      "bytes": 34548,
+      "sha256": "11325b04820536459b5806d5c4a2556f47a8d217188bd6bc27b1f2f5bfa033c9"
+    },
+    {
+      "path": "assets/audio/minimax/name-cola-zero-small.mp3",
+      "bytes": 36276,
+      "sha256": "625cb4ceebd08ffa4816cde61185ea6d92dca949a8c0f8b2deb5e987bfd5a93b"
+    },
+    {
+      "path": "assets/audio/minimax/name-cola.mp3",
+      "bytes": 31668,
+      "sha256": "1f6e8bfd04f3095001ea23e33153722fa3911e89d46cd6260b5fe56018a22c6c"
+    },
+    {
+      "path": "assets/audio/minimax/name-corn.mp3",
+      "bytes": 26484,
+      "sha256": "3dea273b1893af5a21fdec605c5c210cb5bec59fe933df7235752300b9146cb1"
+    },
+    {
+      "path": "assets/audio/minimax/name-fish.mp3",
+      "bytes": 20148,
+      "sha256": "ab5d7ad3083352ff656581348d8d696b569e1aec824f7174d6498954e5888637"
+    },
+    {
+      "path": "assets/audio/minimax/name-fries.mp3",
+      "bytes": 25332,
+      "sha256": "f204b08381b2519981414c8c91526669a81b8df932489688fea5f4cfa6339db1"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-1106.mp3",
+      "bytes": 40308,
+      "sha256": "8dc85002cfbf3ca9591f618b38e21b67995b3f29964a62003a8b1aced5d252ca"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-1120.mp3",
+      "bytes": 30516,
+      "sha256": "26699cfce63c4a4bba23649afc623599041251f9cf88460f9d46f7bae1902b19"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-1401.mp3",
+      "bytes": 27060,
+      "sha256": "e35095a884aa85fd7c328651b2875b3fee8809d9265fd42bc5135ad4fc287c3a"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-1406.mp3",
+      "bytes": 25332,
+      "sha256": "3e75882f504ccc4af62571d864c52c26fe52a5ce561c1080572c163a9ee21b77"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-1440.mp3",
+      "bytes": 27060,
+      "sha256": "889a6c075d06aa7dccaeea75285bc8087b3e23eece8056b365b349745062f72f"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-3010.mp3",
+      "bytes": 31668,
+      "sha256": "9ec0038f1f8a51fb85aca77b0ca1e7213658ebb8803a8c0b3212247d793f5163"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-3755.mp3",
+      "bytes": 30516,
+      "sha256": "3efb082246ca2f474e9d355648db6c5ff8322729768ab4a1b4812825c3bd4028"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-4437.mp3",
+      "bytes": 29364,
+      "sha256": "85fa3b4aad5e1de89801c46628d01b925d6cdd52b0a5f88d198bda620e368a30"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-4648.mp3",
+      "bytes": 36276,
+      "sha256": "5edc46fcb73739a2b9a93d25edd1f4870782898c1756efb34b7a41cb4cba0c34"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-4810.mp3",
+      "bytes": 22452,
+      "sha256": "78cd45b771266f92cf23c2104774bdec3b3b58036fe682d137b3e122b467e884"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-507394.mp3",
+      "bytes": 26484,
+      "sha256": "5ecde75c84227311d1bde68f2cd3315817893b1f859c15d77e90a00c3f7b2e1c"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-511781.mp3",
+      "bytes": 36852,
+      "sha256": "e5143729a76751c11cf0e609b3ec16cc0765d39768eb20445502188e69ed91c2"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-521143.mp3",
+      "bytes": 27060,
+      "sha256": "6a2b9d87d218616e3979e928648d671aa56073cafb3bde08644b739a5034e1a8"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-521915.mp3",
+      "bytes": 37428,
+      "sha256": "4bd6d3fa5b9e3eb26768b005d4f41eecc1c09e2ec1bf6dd1e49b5ddd56fd8ba9"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-521952.mp3",
+      "bytes": 27060,
+      "sha256": "a7560b9e90da2e1d024732baf9ca4127d13e14109ac539da10224591bbd9bf9b"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-521953.mp3",
+      "bytes": 38004,
+      "sha256": "848fbbfbbd4a2767181e2ff9720b23e418d7f3b408cb6c3742313668e251ad00"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-6352.mp3",
+      "bytes": 31668,
+      "sha256": "24ff338fff930f0f2551c91a26bd7aba99410614d066949e5cc627c3c38bf3c3"
+    },
+    {
+      "path": "assets/audio/minimax/name-live-cola.mp3",
+      "bytes": 18420,
+      "sha256": "bd612092b4d8b155dfe6b4b433fbeb6c83ee5f24c995e254da0d3ae87ce48034"
+    },
+    {
+      "path": "assets/audio/minimax/name-nuggets.mp3",
+      "bytes": 24756,
+      "sha256": "42d613d01afec0c15bd679ec37873b5e34c6af5d197bd646952275b7a30f1f9d"
+    },
+    {
+      "path": "assets/audio/minimax/name-orange.mp3",
+      "bytes": 42036,
+      "sha256": "498139db23b565510617f80cd53d04a92f84a2a1e8f024bd3f99dffbf26b167e"
+    },
+    {
+      "path": "assets/audio/minimax/name-water.mp3",
+      "bytes": 27636,
+      "sha256": "1b51e984d1bd0bad4d68c88baa0e63b22ac4bde23ff68074b7e677236e236adf"
+    },
+    {
+      "path": "assets/audio/minimax/nuggets.mp3",
+      "bytes": 58740,
+      "sha256": "c65cf2558ee58c1818cc48ab5bc2ee6c8b019fafb16cc6bdf2781418f65ca47e"
+    },
+    {
+      "path": "assets/audio/minimax/option-back.mp3",
+      "bytes": 23028,
+      "sha256": "36a48c54299b0b9f385245c67dd0e44c5166a139964f88ad05a1a0934f9a656b"
+    },
+    {
+      "path": "assets/audio/minimax/option-confirm.mp3",
+      "bytes": 42612,
+      "sha256": "ac45fd166d49013b4f538febb1e86a40f2826aa68dd8811a58c15e69e3586150"
+    },
+    {
+      "path": "assets/audio/minimax/option-help.mp3",
+      "bytes": 27636,
+      "sha256": "e3d71471cd8e9d7cf208146b0b53caa035592c6c65ccf71554c73ec697240e08"
+    },
+    {
+      "path": "assets/audio/minimax/option-ice.mp3",
+      "bytes": 46068,
+      "sha256": "8a0f8eaa3414fce06511d8e7aba8f5f9bf1a577242647e75d1f962ea61d4d256"
+    },
+    {
+      "path": "assets/audio/minimax/option-kind.mp3",
+      "bytes": 78900,
+      "sha256": "e3f33173ae0cf94ccf2195226bfbbc97af44d56106ccc511a68a1fcbf156f01a"
+    },
+    {
+      "path": "assets/audio/minimax/option-next.mp3",
+      "bytes": 18996,
+      "sha256": "cac6ee1a150d00d50dc3f00e37cabb6bb146d3eb82dfeb49f191555a77dd0bfd"
+    },
+    {
+      "path": "assets/audio/minimax/option-pending.mp3",
+      "bytes": 62772,
+      "sha256": "c1e8755cf7e3470d0514117673e75c89a711a1f9aea7a50148c4120c97f10bfd"
+    },
+    {
+      "path": "assets/audio/minimax/option-size.mp3",
+      "bytes": 68532,
+      "sha256": "097337af15e1b8dca59e5a8dfb22ecb775d25236b281a9cbc44db1b6ecb7fa9c"
+    },
+    {
+      "path": "assets/audio/minimax/orange.mp3",
+      "bytes": 67380,
+      "sha256": "d7d5941cea526d49c19329afb942648125afd129f2e4980ca956ce0e61d7b086"
+    },
+    {
+      "path": "assets/audio/minimax/original-prefix.mp3",
+      "bytes": 49524,
+      "sha256": "68a017145d13e3e70ad274f4668370c17382d9528663b92a45237a1780f84ad7"
+    },
+    {
+      "path": "assets/audio/minimax/quantity-1.mp3",
+      "bytes": 16692,
+      "sha256": "b9bf233b7a35edb37c7dde2d745cd91fddcdebd88ac4238a346a5f3303dd67c2"
+    },
+    {
+      "path": "assets/audio/minimax/quantity-2.mp3",
+      "bytes": 17268,
+      "sha256": "482dc7ec583a8f19797d4a420ea98f834b04e078338432b1dc7d6a62f43acdf8"
+    },
+    {
+      "path": "assets/audio/minimax/quantity-3.mp3",
+      "bytes": 18996,
+      "sha256": "c51d8a6e356d52607593663bab4edf715a195c9185c9654b50ff052336777c58"
+    },
+    {
+      "path": "assets/audio/minimax/quantity-4.mp3",
+      "bytes": 18996,
+      "sha256": "a426da57f0c82e5043fdfa11f259c0b7ad927ae6a6b68c36e0e63bc656a338b5"
+    },
+    {
+      "path": "assets/audio/minimax/quantity-5.mp3",
+      "bytes": 18420,
+      "sha256": "fc043a03e2c26f15d063c7bf8ff45a70c100984798cfc0277325029e013fc60d"
+    },
+    {
+      "path": "assets/audio/minimax/recap-prefix.mp3",
+      "bytes": 19572,
+      "sha256": "6a92906bfe3d9694d67394463d3b01eef12e6ac509f59c5c0e1932e4ab634b4e"
+    },
+    {
+      "path": "assets/audio/minimax/selected-prefix.mp3",
+      "bytes": 19572,
+      "sha256": "dad457c1316436e222922fa417cfc151ca8368e5db6c554c10a11202540b4c52"
+    },
+    {
+      "path": "assets/audio/minimax/side.mp3",
+      "bytes": 81780,
+      "sha256": "cdccf5bab660ec3deae74f3a08147f652cb39cde98c639c80cf72bc0ec4f086a"
+    },
+    {
+      "path": "assets/audio/minimax/size-large.mp3",
+      "bytes": 16692,
+      "sha256": "9af755864821c2f22de87da60f1e5b1e56430b22ed3c4c217a409fc4609ea047"
+    },
+    {
+      "path": "assets/audio/minimax/size-medium.mp3",
+      "bytes": 18420,
+      "sha256": "8340727698c31536d83190ac69b1306d59e40947869ee58ff68d88a008bb2376"
+    },
+    {
+      "path": "assets/audio/minimax/size-small.mp3",
+      "bytes": 18420,
+      "sha256": "17c37f03bbda359657dde1c02717fef53816b38e3f34f4823be60fecdde4e0bf"
+    },
+    {
+      "path": "assets/audio/minimax/start.mp3",
+      "bytes": 62772,
+      "sha256": "1d93345b7c62949abcbeebd10e8e3a67a2af97be37a7cddb88b705253cb56e60"
+    },
+    {
+      "path": "assets/audio/minimax/water.mp3",
+      "bytes": 46068,
+      "sha256": "7db1c63ae1bfe993e4cd168970cbc6e23d2b697aad39291db52e8c97c525ce22"
+    },
+    {
+      "path": "audio.js",
+      "bytes": 3284,
+      "sha256": "9bcc6976855092086bc85926b0b7433647c68004ed7ab854f282621c204293df"
+    },
+    {
+      "path": "demo-data.js",
+      "bytes": 2389,
+      "sha256": "10e3f1522dfe6bbc836b33828d238d9c25f719db3cccf91b63f7ec77cb77656e"
+    },
+    {
+      "path": "icons.js",
+      "bytes": 2388,
+      "sha256": "d0c9d8592987fec1800398cc15d32a156793ae76d030819048a83d19fe32aa11"
+    },
+    {
+      "path": "index.html",
+      "bytes": 976,
+      "sha256": "95b09c42e879eb87d2edca8c63b8a373d5b932f0644198a14262c53b6fecf7ac"
+    },
+    {
+      "path": "option-view.js",
+      "bytes": 3630,
+      "sha256": "a9afc4ca0c9f8070493567f515169108e34c9fada2e215b803e433fd13e205e8"
+    },
+    {
+      "path": "options.js",
+      "bytes": 3342,
+      "sha256": "459eb2508de095f0f435bb50b34605b6f0e749290e85fef9bbf5a6e3e9e4650a"
+    },
+    {
+      "path": "recovery.js",
+      "bytes": 1740,
+      "sha256": "652c3980402fe9e5cacee47dd7e4697d162acaaa46cfa2b21e9bf81f91278c24"
+    },
+    {
+      "path": "state.js",
+      "bytes": 4544,
+      "sha256": "e3ebb2a1bbd3aba2808641a2e16917d716d83db0c939eb9a4c7951aba45ecfde"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 43649,
+      "sha256": "09fd891945343e5f1561b418c0c8db02bb4797c1e01a05032671a3af1fb4f3f4"
+    },
+    {
+      "path": "views.js",
+      "bytes": 20657,
+      "sha256": "46b12a1f473727625ea2c2c31ee6b9ffe539d59b01d55e105fe20d50f1273620"
+    }
+  ]
+}

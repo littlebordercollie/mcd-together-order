@@ -17,6 +17,7 @@
 | 360 像素窄屏 | 五个主要页面无横向溢出；标题按完整分句换行 |
 | 演示视频 | 75 秒，1280×900，H.264 + AAC；完整解码检查通过 |
 | 公网发布复核（上次已上线版本） | 9 项检查通过：HTTP 200、HTML 与 9 个脚本/样式文件一致、34 条 MiniMax 录音与本地逐字节一致、手机餐盘、交接、图片与语音；另在公网完成 22 项悬停播放检查 |
+| 本次规格版发布 | Pages 部署 `e194f2e` 成功；公开 HTML、11 个脚本/样式、99 条 MiniMax 录音共 111 个文件均 HTTP 200，且与本机构建逐字节一致；本次新开公网浏览器标签读取超时，规格交互与渲染验证使用上列本地真实菜单及静态演示流程 |
 | 依赖审计 | npm audit：0 已知漏洞（本次快照） |
 | 参赛声明 | 与官方下载文件逐字节一致 |
 
@@ -36,6 +37,8 @@
 - 用模拟接口实测电脑 1366×900 与手机 360×780 的恢复入口、确认、空餐盘显示已有订单、刷新恢复、官方状态展示、无付款链接提示、服务器超时及浏览器断网。逐张查看恢复弹窗、空结果和订单详情渲染，并修复中文断句。
 
 [规格流程验证](options-validation.json) · [真实 MCP 调用摘要](live-mcp-evidence.json) · [真实页面联调记录](live-validation.json) · [公网发布记录](published-validation.json) · [浏览器机器记录](browser-validation.json) · [MiniMax 本地悬停记录](minimax-validation.json) · [MiniMax 公网悬停记录](minimax-published-validation.json) · [恢复测试记录](recovery-validation.json) · [页面截图](screenshots/) · [视频记录说明](demo-video.json)
+
+本次规格版公开文件核对见 [发布文件记录](published-options-validation.json)，[本地杯型预览](screenshots/options-live-size-preview.png)保留实际画面。
 
 真实试单证据见 [试单记录](trial-order-validation.json)。创建接口仅调用一次；付款页面已创建标签，但读取页面超时，未确认官方付款页面完整渲染。订单号、完整付款链接及二维码仅保存在本机，不进入公开记录。
 

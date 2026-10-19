@@ -85,7 +85,7 @@ npm run build
 
 - 界面、交互代码与餐盘伙伴形象为本项目制作；学校内部代码、图像、音频和学生资料未复制进公开仓库。
 - 演示餐品图来自[麦当劳官网产品媒体页](https://www.mcdonalds.com.cn/media/product)，为官网历史媒体图，不代表当前门店供应。原链接和文件哈希见 [food-sources.json](docs/food-sources.json)。餐品商标及图片权利归原权利人，不属于代码许可证。
-- 68 条网页语音和 7 段视频旁白通过 [MiniMax 同步语音合成](https://platform.minimax.cn/docs/api-reference/speech-t2a-http) 实际生成，沿用既有学校案例的 `speech-2.8-hd` / `Chinese_sweet_girl_nv1`，语速 `1`。文案、参数、文件哈希及生成时间见 [audio-sources.json](docs/audio-sources.json)。录音随网页加载，访客悬停不会调用付费接口。
+- 99 条网页语音和 7 段视频旁白通过 [MiniMax 同步语音合成](https://platform.minimax.cn/docs/api-reference/speech-t2a-http) 实际生成，沿用既有学校案例的 `speech-2.8-hd` / `Chinese_sweet_girl_nv1`，语速 `1`。文案、参数、文件哈希及生成时间见 [audio-sources.json](docs/audio-sources.json)。录音随网页加载，访客悬停不会调用付费接口。
 - 官方 MCP 文档：[开放平台](https://open.mcd.cn/mcp/doc)、[接入仓库](https://github.com/M-China/mcd-mcp-server)。
 - [官方参赛声明](CONTEST_DECLARATION.md) 按官方文件原文保存。
 
