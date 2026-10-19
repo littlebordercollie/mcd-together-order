@@ -4,7 +4,7 @@
 
 一个面向培智学校学生和陪伴者的点餐沟通原型：学生用少量餐品图卡和短语音表达想吃什么，家长接手核对清单、门店和金额，再通过麦当劳官方渠道购买。
 
-[在线体验](https://littlebordercollie.github.io/mcd-together-order/) · [演示视频](docs/demo.mp4) · [MCP 接入说明](MCP_INTEGRATION.md) · [配套技能](skills/mcd-together-order/SKILL.md) · [验证记录](docs/VALIDATION.md)
+[在线体验](https://littlebordercollie.github.io/mcd-together-order/) · [演示视频](docs/demo.mp4) · [MCP 接入说明](MCP_INTEGRATION.md) · [配套技能](skills/mcd-together-order/SKILL.md) · [验证记录](docs/VALIDATION.md) · [官方报名](https://github.com/M-China/mcd-developer-innovation-challenge/issues/904)
 
 ![麦麦一起点首页](docs/screenshots/welcome-desktop.png)
 
