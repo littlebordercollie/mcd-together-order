@@ -123,3 +123,19 @@ test("官方待支付原样显示，不将打开链接当成已付款", async (t
   assert.equal((await x.orders.status("test-order")).status, "待支付");
   await assert.rejects(() => x.orders.status("someone-elses-order"));
 });
+
+test("到店核价和创建均不传 beCode，保留服务端菜单的官方默认配料", async (t) => {
+  const modification = {
+    values: [{ code: "ingredient", key: "0-1", quantity: 1 }],
+  };
+  const x = await setup(t, {
+    productFor: () => ({ defaultModification: modification }),
+  });
+  await x.orders.create(x.confirm);
+  for (const { name, args } of x.ctx.calls.filter((c) =>
+    ["calculate-price", "create-order"].includes(c.name),
+  )) {
+    assert.equal(Object.hasOwn(args, "beCode"), false, name);
+    assert.deepEqual(args.items[0].modification, modification, name);
+  }
+});

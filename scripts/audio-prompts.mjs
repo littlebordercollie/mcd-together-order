@@ -1,3 +1,5 @@
+import { menuVoice } from "../lib/menu-voice.mjs";
+
 export const voiceSettings = {
   model: "speech-2.8-hd",
   voice_id: "Chinese_sweet_girl_nv1",
@@ -38,6 +40,12 @@ export const prompts = {
   "selected-prefix": "你选了。",
   "original-prefix": "第一次交给家长时，选了这些。",
   empty: "今天先不选。请家长看看。",
+  ...Object.fromEntries(
+    menuVoice.flatMap((p) => [
+      [p.key, p.name + "。"],
+      ["name-" + p.key, p.name + "。"],
+    ]),
+  ),
 };
 export const narration = [
   [0, "麦麦一起点，孩子慢慢选，家长接着买。"],

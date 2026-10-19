@@ -92,7 +92,6 @@ async function route(path, b) {
       assert(store, "请先查询并选择门店。");
       const args = {
         storeCode: store.storeCode,
-        beCode: store.beCode,
         orderType: 1,
         beType: 1,
       };

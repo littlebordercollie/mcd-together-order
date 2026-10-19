@@ -1141,7 +1141,7 @@ footer a {
 .checkout-store strong {
   font-size: 14px;
 }
-.checkout-store span {
+.checkout-store > div > span {
   display: block;
   color: var(--muted);
   font-size: 12px;
@@ -1888,10 +1888,22 @@ button[aria-busy="true"] {
     display: none;
   }
   .store-strip {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) auto;
     padding: 16px;
     margin-bottom: 24px;
     gap: 10px;
     flex-wrap: wrap;
+  }
+  .store-strip > div {
+    grid-column: 2 / -1;
+  }
+  .store-strip > .button {
+    grid-column: 2;
+    justify-self: start;
+  }
+  .store-strip > .store-stamp {
+    grid-column: 3;
   }
   .store-strip strong {
     font-size: 15px;

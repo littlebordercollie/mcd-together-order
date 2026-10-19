@@ -1,0 +1,206 @@
+{
+  "source": "Official MCP read-only responses; public restaurant/menu fields only",
+  "stores": [
+    {
+      "storeCode": "1950284",
+      "storeName": "麦当劳北京育知东路餐厅",
+      "address": "回龙观育知东路30号院5号楼",
+      "businessStatus": false,
+      "distance": 193
+    },
+    {
+      "storeCode": "1950242",
+      "storeName": "麦当劳北京文华路餐厅",
+      "address": "回龙观黄土店黄平路19号院泰华龙旗广场3#商业楼龙旗购物中心一层F1-022商铺",
+      "businessStatus": false,
+      "distance": 980
+    },
+    {
+      "storeCode": "1950147",
+      "storeName": "麦当劳北京回龙观西大街餐厅",
+      "address": "回龙观西大街北侧北店时代广场C段首层西侧的一部份",
+      "businessStatus": true,
+      "distance": 1009
+    },
+    {
+      "storeCode": "1950442",
+      "storeName": "麦当劳北京育知西路1餐厅",
+      "address": "回龙观镇育知西路",
+      "businessStatus": false,
+      "distance": 1282
+    },
+    {
+      "storeCode": "1950770",
+      "storeName": "麦当劳北京回龙观东大街腾讯餐厅",
+      "address": "回龙观大街338号院1号楼",
+      "businessStatus": false,
+      "distance": 1354
+    }
+  ],
+  "menu": {
+    "meals": {
+      "1406": {
+        "name": "板烧鸡腿堡",
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20241008/product/MS_1406_320.png",
+        "currentPrice": "23.5",
+        "originalPrice": "23.5",
+        "canWithOrder": false
+      },
+      "3010": {
+        "name": "雪碧",
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G3010_320.png",
+        "currentPrice": "9.5",
+        "originalPrice": "9.5",
+        "canWithOrder": false
+      },
+      "4810": {
+        "name": "薯条",
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250523/product/MS_G4810_320_1747877491921.png",
+        "currentPrice": "14.5",
+        "originalPrice": "14.5",
+        "canWithOrder": false
+      }
+    }
+  },
+  "details": {
+    "1406": {
+      "code": "1406",
+      "name": "板烧鸡腿堡",
+      "rounds": [],
+      "image": "https://menu-img.mcd.cn/pcm/prod/menu/20241008/product/MS_1406_600.png",
+      "modification": {
+        "items": [
+          {
+            "maxValues": 2,
+            "minValues": 0,
+            "values": [
+              {
+                "code": "102201",
+                "price": 0,
+                "name": "烤味酱",
+                "maxQuantity": 1,
+                "minQuantity": 0,
+                "selectedQuantity": 1,
+                "selectedKey": "0-1",
+                "unselectedKey": "0-0"
+              },
+              {
+                "code": "120512",
+                "price": 0,
+                "name": "切块生菜",
+                "maxQuantity": 1,
+                "minQuantity": 0,
+                "selectedQuantity": 1,
+                "selectedKey": "0-1",
+                "unselectedKey": "0-0"
+              }
+            ]
+          }
+        ]
+      },
+      "supportModify": true
+    },
+    "3010": {
+      "code": "3010",
+      "name": "雪碧（小杯）",
+      "rounds": [],
+      "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_3010_600.png",
+      "modification": {
+        "items": [
+          {
+            "maxValues": 1,
+            "minValues": 1,
+            "values": [
+              {
+                "code": "200002",
+                "price": 0,
+                "name": "标准",
+                "maxQuantity": 1,
+                "minQuantity": 0,
+                "selectedQuantity": 1,
+                "selectedKey": "0-1"
+              },
+              {
+                "code": "200002",
+                "price": 0,
+                "name": "去冰",
+                "maxQuantity": 1,
+                "minQuantity": 0,
+                "selectedQuantity": 0,
+                "selectedKey": "0-0"
+              },
+              {
+                "code": "200002",
+                "price": 0,
+                "name": "多冰",
+                "maxQuantity": 1,
+                "minQuantity": 0,
+                "selectedQuantity": 0,
+                "selectedKey": "0-2"
+              },
+              {
+                "code": "200002",
+                "price": 0,
+                "name": "少冰",
+                "maxQuantity": 1,
+                "minQuantity": 0,
+                "selectedQuantity": 0,
+                "selectedKey": "1-1"
+              }
+            ]
+          }
+        ]
+      },
+      "supportModify": true
+    },
+    "4810": {
+      "code": "4810",
+      "name": "中薯条",
+      "rounds": [],
+      "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250423/product/MS_4810_600_1745199801147.png",
+      "supportModify": false
+    }
+  },
+  "quote": {
+    "productOriginalPrice": 4750,
+    "productPrice": 4750,
+    "originalPrice": 4750,
+    "discount": 0,
+    "price": 4750,
+    "productList": [
+      {
+        "productCode": "1406",
+        "productName": "板烧鸡腿堡",
+        "quantity": 1,
+        "originalSubtotal": 2350,
+        "subtotal": 2350
+      },
+      {
+        "productCode": "4810",
+        "productName": "中薯条",
+        "quantity": 1,
+        "originalSubtotal": 1450,
+        "subtotal": 1450
+      },
+      {
+        "productCode": "3010",
+        "productName": "雪碧小杯",
+        "quantity": 1,
+        "originalSubtotal": 950,
+        "subtotal": 950
+      }
+    ],
+    "takeWayList": [
+      {
+        "code": "eat-in",
+        "title": "堂食",
+        "subtitle": "店内用餐"
+      },
+      {
+        "code": "take-in-store",
+        "title": "外带",
+        "subtitle": "店内自提"
+      }
+    ]
+  }
+}

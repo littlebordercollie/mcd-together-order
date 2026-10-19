@@ -1,0 +1,155 @@
+{
+  "at": "2026-10-19T16:07:13.509Z",
+  "base": "http://127.0.0.1:3741",
+  "scenario": "北京回龙观地铁站，到店自取，只读联调",
+  "checks": [
+    "真实门店和菜单经过页面接口加载",
+    "全部已加载单品绑定精确名称录音",
+    "desktop/prepare 没有横向溢出",
+    "desktop 真实餐品录音实际播放且没有加入清单",
+    "desktop/choose 没有横向溢出",
+    "desktop/recap 没有横向溢出",
+    "desktop 核价响应和页面金额一致",
+    "desktop 显示官方堂食和外带选项",
+    "desktop 核价保留三个餐品及各一份",
+    "desktop 下单开关关闭时确认后仍不可创建",
+    "desktop/quote 没有横向溢出",
+    "mobile/prepare 没有横向溢出",
+    "mobile 真实餐品录音实际播放且没有加入清单",
+    "mobile/choose 没有横向溢出",
+    "mobile/recap 没有横向溢出",
+    "mobile 核价响应和页面金额一致",
+    "mobile 显示官方堂食和外带选项",
+    "mobile 核价保留三个餐品及各一份",
+    "mobile 下单开关关闭时确认后仍不可创建",
+    "mobile/quote 没有横向溢出",
+    "未发起任何创建订单请求",
+    "页面没有脚本错误"
+  ],
+  "errors": [],
+  "screenshots": [
+    "docs/screenshots/live-prepare-desktop.png",
+    "docs/screenshots/live-choose-desktop.png",
+    "docs/screenshots/live-recap-desktop.png",
+    "docs/screenshots/live-quote-desktop.png",
+    "docs/screenshots/live-prepare-mobile.png",
+    "docs/screenshots/live-choose-mobile.png",
+    "docs/screenshots/live-recap-mobile.png",
+    "docs/screenshots/live-quote-mobile.png"
+  ],
+  "transactionRequests": 0,
+  "store": {
+    "storeCode": "1950147",
+    "name": "麦当劳北京回龙观西大街餐厅",
+    "address": "回龙观西大街北侧北店时代广场C段首层西侧的一部份",
+    "distance": 1009
+  },
+  "products": [
+    {
+      "id": "1120",
+      "name": "双层吉士汉堡",
+      "priceFen": 2250,
+      "audio": "live-1120"
+    },
+    {
+      "id": "1401",
+      "name": "麦乐鸡5块",
+      "priceFen": 1500,
+      "audio": "live-1401"
+    },
+    {
+      "id": "1406",
+      "name": "板烧鸡腿堡",
+      "priceFen": 2350,
+      "audio": "live-1406"
+    },
+    {
+      "id": "1440",
+      "name": "麦辣鸡腿汉堡",
+      "priceFen": 2250,
+      "audio": "live-1440"
+    },
+    {
+      "id": "3010",
+      "name": "雪碧（小杯）",
+      "priceFen": 950,
+      "audio": "live-3010"
+    },
+    {
+      "id": "3755",
+      "name": "纯牛奶(盒装)",
+      "priceFen": 1100,
+      "audio": "live-3755"
+    },
+    {
+      "id": "4810",
+      "name": "中薯条",
+      "priceFen": 1450,
+      "audio": "live-4810"
+    },
+    {
+      "id": "507394",
+      "name": "热牛奶中杯",
+      "priceFen": 1900,
+      "audio": "live-507394"
+    },
+    {
+      "id": "521143",
+      "name": "4块麦乐鸡",
+      "priceFen": 1200,
+      "audio": "live-521143"
+    },
+    {
+      "id": "521915",
+      "name": "冰糖葫芦酸奶风味派",
+      "priceFen": 950,
+      "audio": "live-521915"
+    },
+    {
+      "id": "521952",
+      "name": "龙焰鸡腿堡",
+      "priceFen": 2400,
+      "audio": "live-521952"
+    },
+    {
+      "id": "521953",
+      "name": "龙焰芝士棒鸡腿堡",
+      "priceFen": 2700,
+      "audio": "live-521953"
+    }
+  ],
+  "quote": {
+    "totalFen": 4750,
+    "lines": [
+      {
+        "id": "1406",
+        "name": "板烧鸡腿堡",
+        "quantity": 1,
+        "subtotalFen": 2350
+      },
+      {
+        "id": "3010",
+        "name": "雪碧小杯",
+        "quantity": 1,
+        "subtotalFen": 950
+      },
+      {
+        "id": "4810",
+        "name": "中薯条",
+        "quantity": 1,
+        "subtotalFen": 1450
+      }
+    ],
+    "takeWays": [
+      {
+        "code": "eat-in",
+        "name": "堂食"
+      },
+      {
+        "code": "take-in-store",
+        "name": "外带"
+      }
+    ]
+  },
+  "passed": true
+}

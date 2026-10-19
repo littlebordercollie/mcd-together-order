@@ -1,0 +1,142 @@
+{
+  "at": "2026-10-19T16:08:04.207Z",
+  "server": "https://mcp.mcd.cn",
+  "transport": "Streamable HTTP",
+  "schemaRetrievedAt": "2026-10-19T15:56:46.640Z",
+  "availableApplicationTools": [
+    "query-nearby-stores",
+    "now-time-info",
+    "query-order",
+    "create-order",
+    "query-meals",
+    "query-meal-detail",
+    "calculate-price",
+    "order-list"
+  ],
+  "calls": {
+    "query-nearby-stores": {
+      "success": 5,
+      "failed": 0
+    },
+    "query-meals": {
+      "success": 6,
+      "failed": 0
+    },
+    "query-meal-detail": {
+      "success": 91,
+      "failed": 0
+    },
+    "calculate-price": {
+      "success": 7,
+      "failed": 0
+    }
+  },
+  "queryLocation": {
+    "city": "北京",
+    "landmark": "回龙观地铁站"
+  },
+  "store": {
+    "storeCode": "1950147",
+    "name": "麦当劳北京回龙观西大街餐厅",
+    "address": "回龙观西大街北侧北店时代广场C段首层西侧的一部份",
+    "distance": 1009
+  },
+  "priceUnit": {
+    "menu": "yuan",
+    "quote": "fen",
+    "evidence": "Official tools/list description and matching live menu/quote values"
+  },
+  "testItems": [
+    {
+      "productCode": "1406",
+      "quantity": 1,
+      "modification": {
+        "values": [
+          {
+            "code": "102201",
+            "key": "0-1",
+            "quantity": 1
+          },
+          {
+            "code": "120512",
+            "key": "0-1",
+            "quantity": 1
+          }
+        ]
+      }
+    },
+    {
+      "productCode": "4810",
+      "quantity": 1
+    },
+    {
+      "productCode": "3010",
+      "quantity": 1,
+      "modification": {
+        "values": [
+          {
+            "code": "200002",
+            "key": "0-1",
+            "quantity": 1
+          }
+        ]
+      }
+    }
+  ],
+  "quote": {
+    "productOriginalPrice": 4750,
+    "productPrice": 4750,
+    "originalPrice": 4750,
+    "discount": 0,
+    "price": 4750,
+    "productList": [
+      {
+        "productCode": "1406",
+        "productName": "板烧鸡腿堡",
+        "quantity": 1,
+        "originalSubtotal": 2350,
+        "subtotal": 2350
+      },
+      {
+        "productCode": "4810",
+        "productName": "中薯条",
+        "quantity": 1,
+        "originalSubtotal": 1450,
+        "subtotal": 1450
+      },
+      {
+        "productCode": "3010",
+        "productName": "雪碧小杯",
+        "quantity": 1,
+        "originalSubtotal": 950,
+        "subtotal": 950
+      }
+    ],
+    "takeWayList": [
+      {
+        "code": "eat-in",
+        "title": "堂食",
+        "subtitle": "店内用餐"
+      },
+      {
+        "code": "take-in-store",
+        "title": "外带",
+        "subtitle": "店内自提"
+      }
+    ]
+  },
+  "sourceHashes": {
+    ".local/mcp-schemas.json": "e5fecfe0574fe046ceedd3cf29c28d1dc1509b538303b354bd19a049b6b0e7e4",
+    ".local/live-stores.json": "abeca00dffd4fd0239469563eab193350536b5d600d19dfa82da3ebcdd2984b3",
+    ".local/live-menu.json": "6d7f10aee2317a2aacb592b0ea6015a5168affe59a730dcf30f5a1ccbebc4202",
+    ".local/live-details.json": "06ef14d1077ccc2c70fadf225a46826dae34fefb7f00018eb2b42dc5fba4c5b7",
+    ".local/live-quote.json": "cce81365f880c821c8dbb260ab2c25e1241ba01262b7488ff56d2cc73e979656"
+  },
+  "realOrdersCreated": 0,
+  "paymentPerformed": false,
+  "notes": [
+    "Menu and availability change over time; initial filtered menu had 13 items and subsequent browser run had 12.",
+    "Only public restaurant/product and quote fields are included; no account identifiers or payment links.",
+    "Order creation, payment, pickup and recovery are not verified by these read-only calls."
+  ]
+}

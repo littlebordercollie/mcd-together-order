@@ -11,6 +11,17 @@ export const esc = (v) =>
   );
 export const money = (n) =>
   Number.isFinite(n) ? `¥${(n / 100).toFixed(2)}` : "待核价";
+function storeAddress(value) {
+  const parts =
+    value === "回龙观西大街北侧北店时代广场C段首层西侧的一部份"
+      ? ["回龙观西大街北侧", "北店时代广场C段", "首层西侧的一部份"]
+      : [value];
+  return parts.length === 1
+    ? esc(value)
+    : parts
+        .map((part) => `<span class="phrase">${esc(part)}</span>`)
+        .join("<wbr>");
+}
 const btn = (action, label, cls = "", extra = "") =>
   `<button type="button" data-action="${action}" class="button ${cls}" ${extra}>${label}</button>`;
 export function listen(text, key = "", small = false) {
@@ -43,7 +54,7 @@ export function welcome(s, config) {
 }
 export function prepare(s, config) {
   return `<section class="page-heading"><div><span class="eyebrow">先由家长或老师准备</span><h1>把选择变得简单一点。</h1><p>留下今天可以选的餐品，再把设备交给孩子。</p></div>${buddy("small-buddy")}</section>
-<section class="store-strip">${icon("location")}<div><strong>${esc(s.store.name)}</strong><span>${esc(s.store.address)} · 到店自取</span></div>${config.live ? btn("live", "换一家门店", "secondary") : ""}<span class="store-stamp">${s.mode === "demo" ? "示例门店" : "官方菜单"}</span></section>
+<section class="store-strip">${icon("location")}<div><strong>${esc(s.store.name)}</strong><span>${storeAddress(s.store.address)}<br>到店自取</span></div>${config.live ? btn("live", "换一家门店", "secondary") : ""}<span class="store-stamp">${s.mode === "demo" ? "示例门店" : "官方菜单"}</span></section>
 <div class="section-line"><h2>今天可以选这些</h2><span>点一下可以收起；再次点击恢复。</span></div>
 <div class="prepare-grid">${categories
     .map(
@@ -107,14 +118,14 @@ export function review(s, config) {
   const list = selected(s);
   const origin = s.menu.filter((p) => s.original?.[p.id]);
   return `<section class="page-heading"><div><span class="eyebrow">家长接手 · 一起核对</span><h1><span class="phrase">孩子的想法，</span><wbr><span class="phrase">已经在这里。</span></h1><p>先问一句：“这就是你想要的吗？”</p></div>${btn("back-choice", `${icon("back")} 让孩子再选`, "secondary")}</section>
-<div class="review-layout"><section><div class="intent-banner">${icon("heart")}<div><strong>第一次交接时的选择</strong><p>${origin.map((p) => `${esc(p.name)} × ${s.original[p.id]}`).join("、") || "暂未选择"}</p></div>${listen(
+<div class="review-layout"><section><div class="intent-banner">${icon("heart")}<div><strong>第一次交接时的选择</strong><p>${origin.map((p, i) => `<span class="phrase">${esc(p.name)} × ${s.original[p.id]}${i < origin.length - 1 ? "、" : ""}</span>`).join("<wbr>") || "暂未选择"}</p></div>${listen(
     origin.map((p) => `${s.original[p.id]}份${p.name}`).join("，"),
     listAudio(
       origin.map((p) => ({ ...p, quantity: s.original[p.id] })),
       "original-prefix",
     ),
   )}</div><div class="review-list">${list.map((p) => `<article class="review-item">${image(p)}<div class="review-name"><h2>${esc(p.name)}</h2><span>${s.mode === "live" ? `官方餐品编号 ${esc(p.id)}` : "示例餐品"}</span><strong>${s.mode === "demo" ? "示例单价 " : ""}${money(p.priceFen)}</strong></div><div class="quantity-control"><button data-action="quantity" data-id="${esc(p.id)}" data-delta="-1" aria-label="减少${esc(p.name)}">${icon("minus")}</button><output aria-label="${esc(p.name)}数量">${p.quantity}</output><button data-action="quantity" data-id="${esc(p.id)}" data-delta="1" ${p.quantity >= 5 ? "disabled" : ""} aria-label="增加${esc(p.name)}">${icon("plus")}</button></div></article>`).join("") || '<p class="empty-category">清单已清空，可以让孩子重新选择。</p>'}</div>${s.changes.length ? `<div class="changes"><strong>一起确认这些调整</strong><ul>${s.changes.map((c) => `<li>${c.actor === "child" ? "孩子" : "家长"}调整：${esc(s.menu.find((p) => p.id === c.id)?.name)}：${c.before} 份 → ${c.after} 份</li>`).join("")}</ul><span>请告诉孩子改了什么，再确认一次。</span></div>` : ""}</section>
-<aside class="checkout"><div class="checkout-title">${icon("bag")}<h2>这一餐的清单</h2></div><div class="checkout-store">${icon("location")}<div><strong>${esc(s.store.name)}</strong><span>${esc(s.store.address)}<br>到店自取</span></div></div><div class="quote-lines">${s.quote ? s.quote.lines.map((l) => `<div><span>${esc(l.name)} × ${l.quantity}</span><b>${money(l.subtotalFen)}</b></div>`).join("") : "<p>核对数量后，查看这一餐的金额。</p>"}</div><div class="total"><span>${s.mode === "demo" ? "示例合计" : "官方核价"}</span><strong>${s.quote ? money(s.quote.totalFen) : "—"}</strong></div>
+<aside class="checkout"><div class="checkout-title">${icon("bag")}<h2>这一餐的清单</h2></div><div class="checkout-store">${icon("location")}<div><strong>${esc(s.store.name)}</strong><span>${storeAddress(s.store.address)}<br>到店自取</span></div></div><div class="quote-lines">${s.quote ? s.quote.lines.map((l) => `<div><span>${esc(l.name)} × ${l.quantity}</span><b>${money(l.subtotalFen)}</b></div>`).join("") : "<p>核对数量后，查看这一餐的金额。</p>"}</div><div class="total"><span>${s.mode === "demo" ? "示例合计" : "官方核价"}</span><strong>${s.quote ? money(s.quote.totalFen) : "—"}</strong></div>
 ${!list.length ? `<p>孩子这次没有选餐品。</p>${btn("finish-empty", "知道了，这次先不买", "primary full")}` : s.quote ? `<p class="quote-caption">${s.mode === "demo" ? "此金额用于体验，不代表门店售价。" : "金额已更新，提交前会再次核价。"}</p>${s.quote.takeWays?.length ? `<label class="field">取餐方式<select id="takeway">${s.quote.takeWays.map((t) => `<option value="${esc(t.code)}">${esc(t.name)}</option>`).join("")}</select></label>` : ""}<label class="confirm-check"><input id="parent-confirm" type="checkbox"><span>已和孩子确认餐品、数量${s.mode === "live" ? "、门店和金额" : ""}</span></label>${btn("order", s.mode === "demo" ? "完成这一餐的沟通" : `${icon("bag")} 确认并创建订单`, "primary full", 'id="order-button" disabled')}${s.mode === "live" && !config.orderEnabled ? '<p class="small-note">本机尚未开启下单，请先完成连接验证。</p>' : ""}` : btn("quote", s.mode === "demo" ? "查看示例金额" : "获取官方实时价格", "primary full", list.length ? "" : "disabled")}
 ${s.mode === "live" && config.hasPendingOrder ? btn("recovery", "找回刚才的订单", "secondary full") : ""}
 </aside></div>`;

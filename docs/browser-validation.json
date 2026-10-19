@@ -1,5 +1,6 @@
 {
-  "at": "2026-10-19T14:21:07.413Z",
+  "at": "2026-10-19T16:05:26.964Z",
+  "base": "http://127.0.0.1:3741",
   "checks": [
     "desktop/welcome: 无横向溢出",
     "desktop/welcome: 图片实际加载",
@@ -31,7 +32,7 @@
     "desktop: 完成页明确没有扣款",
     "desktop/done: 无横向溢出",
     "desktop/done: 图片实际加载",
-    "34 个 MiniMax 音频均真实触发 playing 且有有效时长",
+    "68 个 MiniMax 音频均真实触发 playing 且有有效时长",
     "desktop: 什么都不选也能完成沟通且不创建订单",
     "tablet/welcome: 无横向溢出",
     "tablet/welcome: 图片实际加载",
@@ -256,6 +257,142 @@
     {
       "key": "empty",
       "duration": 2.763188
+    },
+    {
+      "key": "live-521143",
+      "duration": 1.439656
+    },
+    {
+      "key": "name-live-521143",
+      "duration": 1.532531
+    },
+    {
+      "key": "live-521915",
+      "duration": 2.217531
+    },
+    {
+      "key": "name-live-521915",
+      "duration": 2.171094
+    },
+    {
+      "key": "live-521952",
+      "duration": 1.66025
+    },
+    {
+      "key": "name-live-521952",
+      "duration": 1.532531
+    },
+    {
+      "key": "live-521953",
+      "duration": 2.4265
+    },
+    {
+      "key": "name-live-521953",
+      "duration": 2.2
+    },
+    {
+      "key": "live-1106",
+      "duration": 2.6
+    },
+    {
+      "key": "name-live-1106",
+      "duration": 2.345219
+    },
+    {
+      "key": "live-1120",
+      "duration": 1.66025
+    },
+    {
+      "key": "name-live-1120",
+      "duration": 1.7415
+    },
+    {
+      "key": "live-1401",
+      "duration": 1.915656
+    },
+    {
+      "key": "name-live-1401",
+      "duration": 1.532531
+    },
+    {
+      "key": "live-1406",
+      "duration": 1.486094
+    },
+    {
+      "key": "name-live-1406",
+      "duration": 1.405469
+    },
+    {
+      "key": "live-1440",
+      "duration": 1.613813
+    },
+    {
+      "key": "name-live-1440",
+      "duration": 1.532531
+    },
+    {
+      "key": "live-3010",
+      "duration": 1.915656
+    },
+    {
+      "key": "name-live-3010",
+      "duration": 1.834406
+    },
+    {
+      "key": "live-3755",
+      "duration": 1.486094
+    },
+    {
+      "key": "name-live-3755",
+      "duration": 1.7415
+    },
+    {
+      "key": "live-4437",
+      "duration": 1.532531
+    },
+    {
+      "key": "name-live-4437",
+      "duration": 1.66025
+    },
+    {
+      "key": "live-4648",
+      "duration": 2.217531
+    },
+    {
+      "key": "name-live-4648",
+      "duration": 2.089813
+    },
+    {
+      "key": "live-4810",
+      "duration": 1.149406
+    },
+    {
+      "key": "name-live-4810",
+      "duration": 1.230688
+    },
+    {
+      "key": "live-6352",
+      "duration": 1.915656
+    },
+    {
+      "key": "name-live-6352",
+      "duration": 1.834406
+    },
+    {
+      "key": "live-507394",
+      "duration": 1.486094
+    },
+    {
+      "key": "name-live-507394",
+      "duration": 1.486094
+    },
+    {
+      "key": "live-511781",
+      "duration": 2.217531
+    },
+    {
+      "key": "name-live-511781",
+      "duration": 2.125469
     }
   ],
   "passed": true
